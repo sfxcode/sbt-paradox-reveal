@@ -1,0 +1,16 @@
+*.class
+*.log
+target
+project/project
+project/target
+.cache
+.classpath
+.project
+.settings
+bin
+.idea*
+*.iml
+lib
+out
+.DS_Store
+.gitconfig
