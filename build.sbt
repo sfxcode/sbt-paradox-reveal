@@ -7,7 +7,7 @@ import scala.collection.JavaConverters._
 
 inThisBuild(List(
   organization := "com.sfxcode.paradox",
-  version := "1.0.0",
+  version := "1.0.1",
   licenses += "Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.html"),
   scalaVersion := "2.12.8",
   bintrayPackageLabels := Seq("sbt", "plugin", "paradox", "reveal.js"),
@@ -18,7 +18,8 @@ inThisBuild(List(
   developers := List(
     Developer("sfxcode", "Tom Lamers", "tom@sfxcode.com", url("https://github.com/sfxcode"))),
   description := "Paradox Reveal is a paradox plugin for reveal.js presentations.",
-  bintrayReleaseOnPublish in ThisBuild := true
+  bintrayReleaseOnPublish in ThisBuild := true,
+  publishMavenStyle  := true
 
 ))
 

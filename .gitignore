@@ -10,7 +10,6 @@ project/target
 bin
 .idea*
 *.iml
-lib
 out
 .DS_Store
 .gitconfig
