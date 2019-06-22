@@ -3,6 +3,10 @@
 An sbt AutoPlugin for generating reveal.js presentations with Lightbend
 Paradox .
 
+## Documentation
+
+[https://sfxcode.github.io/sbt-paradox-reveal](https://sfxcode.github.io/sbt-paradox-reveal/)
+
 ## Use Paradox for Reveal.js presentations
 
 Combine the power of [Paradox](https://developer.lightbend.com/docs/paradox/current/) with the HTML presentation framework [reveal.js](https://revealjs.com/#/).

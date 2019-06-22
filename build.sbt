@@ -72,9 +72,11 @@ lazy val paradoxRevealTheme = (project in (file("theme") / "reveal"))
 lazy val docs = (project in file("docs"))
   .enablePlugins(ParadoxSitePlugin)
   .enablePlugins(ParadoxMaterialThemePlugin)
+  .enablePlugins(GhpagesPlugin)
   .settings(
     name := "paradox reveal docs",
-    publish / skip := true
+    publish / skip := true,
+    git.remoteRepo := "git@github.com:sfxcode/sbt-paradox-reveal.git"
   )
 
 lazy val demo = (project in file("demo"))
