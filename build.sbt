@@ -7,7 +7,7 @@ import scala.collection.JavaConverters._
 
 inThisBuild(List(
   organization := "com.sfxcode.paradox",
-  version := "1.0.1",
+  version := "1.0.2-SNAPSHOT",
   licenses += "Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.html"),
   scalaVersion := "2.12.8",
   bintrayPackageLabels := Seq("sbt", "plugin", "paradox", "reveal.js"),
@@ -21,7 +21,11 @@ inThisBuild(List(
   bintrayReleaseOnPublish in ThisBuild := true,
   publishMavenStyle  := true
 
+
+
 ))
+
+
 
 lazy val paradox_reveal = project
   .in(file("."))
@@ -77,8 +81,14 @@ lazy val docs = (project in file("docs"))
   .settings(
     name := "paradox reveal docs",
     publish / skip := true,
-    git.remoteRepo := "git@github.com:sfxcode/sbt-paradox-reveal.git"
+    git.remoteRepo := "git@github.com:sfxcode/sbt-paradox-reveal.git",
+    Compile / paradoxMaterialTheme ~= {
+      _.withRepository(uri("https://github.com/sfxcode/sbt-paradox-reveal"))
+      .withColor("teal", "indigo")
+    }
   )
+
+
 
 lazy val demo = (project in file("demo"))
   .enablePlugins(ParadoxSitePlugin)
