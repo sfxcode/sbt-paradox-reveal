@@ -1,11 +1,15 @@
 # sbt-paradox-reveal
 
-An sbt AutoPlugin for generating reveal.js presentations with Lightbend
-Paradox .
+sbt AutoPlugin for generating reveal.js presentations with Lightbend
+Paradox.
 
 ## Documentation
 
 [https://sfxcode.github.io/sbt-paradox-reveal](https://sfxcode.github.io/sbt-paradox-reveal/)
+
+## Directives
+
+Used directives are slide, notes, quote and fragments.
 
 ## Use Paradox for Reveal.js presentations
 
@@ -46,4 +50,10 @@ Enable Plugin in your build.sbt file:
 Run `test` for regular unit tests.
 
 Run `scripted` for [sbt script tests](http://www.scala-sbt.org/1.x/docs/Testing-sbt-plugins.html).
+
+### Alternatives
+
+Same Idea, less configuration options:
+
+[paradox-theme-reveal.js](https://github.com/raboof/paradox-theme-reveal.js)
 
