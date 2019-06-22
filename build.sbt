@@ -1,25 +1,25 @@
 import java.lang.management.ManagementFactory
 
 import com.lightbend.paradox.sbt.ParadoxThemePlugin
-import sbt.Keys.publish
+import sbt.Keys.{publish, publishMavenStyle}
 
 import scala.collection.JavaConverters._
 
 inThisBuild(List(
   organization := "com.sfxcode.paradox",
-  version := "0.9.2",
+  version := "1.0.0",
   licenses += "Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.html"),
   scalaVersion := "2.12.8",
   bintrayPackageLabels := Seq("sbt", "plugin", "paradox", "reveal.js"),
-  bintrayVcsUrl := Some("""git@github.com:com.sfxcode/sbt-paradox-reveal.git"""),
 
   organizationName := "sfxcode",
   organizationHomepage := Some(url("https://github.com/sfxcode")),
   homepage := Some(url("https://github.com/sfxcode")),
-  scmInfo := Some(ScmInfo(url("https://github.com/sfxcode/sbt-paradox-reveal"), "git@github.com:sfxcode/sbt-paradox-reveal.git")),
   developers := List(
     Developer("sfxcode", "Tom Lamers", "tom@sfxcode.com", url("https://github.com/sfxcode"))),
   description := "Paradox Reveal is a paradox plugin for reveal.js presentations.",
+  bintrayReleaseOnPublish in ThisBuild := true
+
 ))
 
 lazy val paradox_reveal = project
