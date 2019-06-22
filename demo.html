@@ -20,7 +20,7 @@
 
 <meta name="description" content="Paradox Reveal is a paradox plugin for reveal.js presentations.">
 <link rel="shortcut icon" href="assets/images/favicon.png">
-<title>Paradox Reveal Theme</title>
+<title>Demo · Paradox Reveal Theme</title>
 <link rel="stylesheet" href="assets/stylesheets/application.451f80e5.css">
 <link rel="stylesheet" href="lib/material__tabs/dist/mdc.tabs.min.css">
 <link rel="stylesheet" href="lib/prettify/prettify.css">
@@ -52,7 +52,12 @@ code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}
 </div>
 <div class="md-flex__cell md-flex__cell--stretch">
 <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+<span class="md-header-nav__topic">
 Paradox Reveal Theme
+</span>
+<span class="md-header-nav__topic">
+Demo
+</span>
 </div>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
@@ -109,16 +114,16 @@ Paradox Reveal Theme
     <li><a href="directive/fragments.html" class="page">Fragments Directive</a></li>
     <li><a href="directive/quote.html" class="page">Quote Directive</a></li>
   </ul></li>
-  <li><a href="demo.html" class="page">Demo</a></li>
+  <li><a href="demo.html" class="active page">Demo</a></li>
 </ul>
 <nav class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul>
-  <li><a href="index.html#paradox-reveal-theme" class="header">Paradox Reveal Theme</a>
+  <li><a href="demo.html#demo" class="header">Demo</a>
   <ul>
-    <li><a href="index.html#motivation" class="header">Motivation</a></li>
-    <li><a href="index.html#use-paradox-for-reveal-js-presentations" class="header">Use Paradox for Reveal.js presentations</a></li>
-    <li><a href="index.html#usage" class="header">Usage</a></li>
+    <li><a href="demo.html#simple-presentation" class="header">Simple Presentation</a></li>
+    <li><a href="demo.html#complex-presentations" class="header">Complex Presentations</a></li>
+    <li><a href="demo.html#showcase" class="header">Showcase</a></li>
   </ul></li>
 </ul>
 </nav>
@@ -140,11 +145,11 @@ Paradox Reveal Theme
 <nav class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul>
-  <li><a href="index.html#paradox-reveal-theme" class="header">Paradox Reveal Theme</a>
+  <li><a href="demo.html#demo" class="header">Demo</a>
   <ul>
-    <li><a href="index.html#motivation" class="header">Motivation</a></li>
-    <li><a href="index.html#use-paradox-for-reveal-js-presentations" class="header">Use Paradox for Reveal.js presentations</a></li>
-    <li><a href="index.html#usage" class="header">Usage</a></li>
+    <li><a href="demo.html#simple-presentation" class="header">Simple Presentation</a></li>
+    <li><a href="demo.html#complex-presentations" class="header">Complex Presentations</a></li>
+    <li><a href="demo.html#showcase" class="header">Showcase</a></li>
   </ul></li>
 </ul>
 </nav>
@@ -155,32 +160,36 @@ Paradox Reveal Theme
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
-<h1><a href="#paradox-reveal-theme" name="paradox-reveal-theme" class="anchor"><span class="anchor-link"></span></a>Paradox Reveal Theme</h1>
-<h2><a href="#motivation" name="motivation" class="anchor"><span class="anchor-link"></span></a>Motivation</h2>
-<p>As software developer i like to create presentations with code examples fast and easy. For technical presentations i prefer reveal.js (simple, portable, nice transitions &hellip;).</p>
-<p>After using Paradox for my software documentation, i decided to use it also for my presentation slides. Having the presentation inside my project i like to present, the full power of paradox is available for a nice presentation with reveal.js. Maybe someone find it useful as well.</p>
-<h2><a href="#use-paradox-for-reveal-js-presentations" name="use-paradox-for-reveal-js-presentations" class="anchor"><span class="anchor-link"></span></a>Use Paradox for Reveal.js presentations</h2>
-<p>Combine the power of <a href="https://developer.lightbend.com/docs/paradox/current/">Paradox</a> with the HTML presentation framework <a href="https://revealjs.com/#/">reveal.js</a>.</p>
-<p>With <strong>Paradox</strong> for</p>
-<ul>
-  <li><a href="https://developer.lightbend.com/docs/paradox/current/customization/templating.html">Templating</a></li>
-  <li><a href="https://developer.lightbend.com/docs/paradox/current/directives/includes.html">Markdown file inclusion</a></li>
-  <li><a href="https://developer.lightbend.com/docs/paradox/current/directives/snippets.html">Snippet inclusion</a></li>
-</ul>
-<p>and <strong>Reveal.js</strong> for</p>
-<ul>
-  <li><a href="https://revealjs.com/#/1">Slides</a></li>
-  <li><a href="https://revealjs.com/#/transitions">HTML Transtions</a></li>
-  <li><a href="https://revealjs.com/#/20">Speager Notes</a></li>
-</ul>
-<p>it is easy to create a presentation with code examples in short time.</p>
-<h2><a href="#usage" name="usage" class="anchor"><span class="anchor-link"></span></a>Usage</h2><p>Install plugin in project/plugins.sbt:</p>
-<p><strong>addSbtPlugin(&ldquo;com.sfxcode.paradox&rdquo; % &ldquo;sbt-paradox-reveal&rdquo; % &ldquo;0.9.2&rdquo;)</strong></p>
-<p>Enable Plugin in your build.sbt file:</p>
-<p><strong>enablePlugins(ParadoxRevealPlugin)</strong></p>
+<h1><a href="#demo" name="demo" class="anchor"><span class="anchor-link"></span></a>Demo</h1>
+<h2><a href="#simple-presentation" name="simple-presentation" class="anchor"><span class="anchor-link"></span></a>Simple Presentation</h2>
+<p>Put following code in your index.md file of the paradox folder.</p>
+<pre><code>@@@ slide
+# My First Presentation
+This Preasentation was made by Paradox and reveal.js
+@@@
+
+@@@ slide
+## Congratulation
+Your second slide is ready !
+@@@
+@@@ slide
+
+# The END
+@@@
+</code></pre>
+<p>Your first presentation with 3 slides is ready &hellip;</p>
+<p>Use sbt paradox command.</p>
+<h2><a href="#complex-presentations" name="complex-presentations" class="anchor"><span class="anchor-link"></span></a>Complex Presentations</h2>
+<p>For more complex presentations use the directives documentation or take a look at the showcase.</p>
+<h2><a href="#showcase" name="showcase" class="anchor"><span class="anchor-link"></span></a>Showcase</h2>
+<p><img src="images/reveal.png" /></p>
+<p>A <a href="reveal_demo.html">Showcase</a> build with this plugin.</p>
+<p>Press <code>s</code> for the reveal.js speaker viev.</p>
+<h3><a href="#showcase-sources" name="showcase-sources" class="anchor"><span class="anchor-link"></span></a>Showcase sources</h3>
+<p>Source code of this demo is in the demo folder of this project.</p>
 </div>
 <div>
-<a href="https://github.com/sfxcode/sbt-paradox-reveal/tree/v0.9.2/docs/src/main/paradox/index.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/sfxcode/sbt-paradox-reveal/tree/v0.9.2/docs/src/main/paradox/demo.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>
@@ -196,17 +205,17 @@ Edit this page
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a href="getting_started.html" title="Getting Started" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<a href="directive/quote.html" title="Quote Directive" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
-Next
+Previous
 </span>
-Getting Started
+Quote Directive
 </span>
-</div>
-<div class="md-flex__cell md-flex__cell--shrink">
-<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
 </div>
 </a>
 </nav>

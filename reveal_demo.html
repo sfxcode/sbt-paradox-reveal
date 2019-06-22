@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta name="generator" content="Paradox, Paradox-Reveal-Theme : 0.9.1">
+
+    <meta name="description" content="Paradox Reveal is a paradox plugin for reveal.js presentations.">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
+    <title></title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h1><a href="#paradox-reveal-js" name="paradox-reveal-js" class="anchor"><span class="anchor-link"></span></a>Paradox Reveal.js</h1>
+            <h3><a href="#sbt-plugin-for-generating-reveal-js-presentations" name="sbt-plugin-for-generating-reveal-js-presentations" class="anchor"><span class="anchor-link"></span></a>SBT Plugin for generating Reveal.js Presentations</h3>
+            <p>Created by <a href="https://github.com/sfxcode">SFXCode</a></p>
+        </section>
+        <section>
+            <h2><a href="#hello-there" name="hello-there" class="anchor"><span class="anchor-link"></span></a>Hello There</h2>
+            <p>reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.</p>
+        </section><!-- Example of nested vertical slides -->
+        <section>
+            <section>
+                <h2><a href="#vertical-slides" name="vertical-slides" class="anchor"><span class="anchor-link"></span></a>Vertical Slides</h2>
+                <p>Slides can be nested inside of each other.</p>
+                <p>Use the <strong>Space</strong> key to navigate through all slides.</p>
+                <p><a href="#"><img src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="logo" /></a></p>
+            </section>
+            <section>
+                <h2><a href="#basement-level-1" name="basement-level-1" class="anchor"><span class="anchor-link"></span></a>Basement Level 1</h2>
+                <p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+            </section>
+            <section>
+                <h2><a href="#basement-level-2" name="basement-level-2" class="anchor"><span class="anchor-link"></span></a>Basement Level 2</h2>
+                <p>That&rsquo;s it, time to go back up.</p>
+                <!--Use Raw for html with attributs-->
+                <a href="#/2">
+                    <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+                </a>
+
+
+            </section>
+        </section>
+        <section>
+            <h2><a href="#point-of-view" name="point-of-view" class="anchor"><span class="anchor-link"></span></a>Point of View</h2>
+            <p>Press <strong>ESC</strong> to enter the slide overview.</p>
+            <p>Hold down the <strong>alt</strong> key ( <strong>ctrl</strong> in Linux ) and click on any element to zoom towards it using <a href="http://lab.hakim.se/zoom-js"">zoom.js</a>. Click again to zoom back out.</p>
+            <p>(NOTE: Use ctrl + click in Linux.)</p>
+        </section>
+        <section>
+            <h2><a href="#touch-optimized" name="touch-optimized" class="anchor"><span class="anchor-link"></span></a>Touch Optimized</h2>
+            <p>Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.</p>
+        </section>
+        <section>
+            <h2><a href="#images" name="images" class="anchor"><span class="anchor-link"></span></a>Images</h2>
+            <p><img src="images/bio-photo.jpg" alt="bio" /></p>
+        </section><section>
+        <h2><a href="#code" name="code" class="anchor"><span class="anchor-link"></span></a>Code</h2>
+        <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/sfxcode/sbt-paradox-reveal/tree/v0.9.1/demo/src/main/scala/example/Hello.scala" target="_blank" title="Go to snippet source"></a><code class="language-scala">package example
+
+object Hello extends Greeting with App {
+  println(greeting)
+}
+
+trait Greeting {
+  lazy val greeting: String = &quot;hello&quot;
+}
+
+</code></pre>
+    </section><!-- Example of Fragments -->
+        <section>
+            <h2><a href="#fragments" name="fragments" class="anchor"><span class="anchor-link"></span></a>Fragments</h2>
+            <p>Hit the next arrow&hellip;</p>
+            <p class="fragment">... to step through ...</p>
+            <p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide</span> </p>
+            <aside class="notes">
+                <p>This slide has fragments which are also stepped through in the notes window.</p>
+            </aside>
+        </section>
+        <section>
+            <h2><a href="#fragment-styles" name="fragment-styles" class="anchor"><span class="anchor-link"></span></a>Fragment Styles</h2>
+            <p>There&rsquo;s different types of fragments, like:</p>
+            <p class="fragment grow">grow</p>
+            <p class="fragment shrink">shrink</p>
+            <p class="fragment fade-out">fade-out</p>
+            <p class="fragment fade-in-then-out">fade-in-then-out</p>
+            <p class="fragment highlight-red">highlight-red</p>
+        </section><section data-transition="none">
+        <h1><a href="#transition-none" name="transition-none" class="anchor"><span class="anchor-link"></span></a>Transition None</h1>
+    </section>
+        <section data-transition="fade">
+            <h1><a href="#transition-fade" name="transition-fade" class="anchor"><span class="anchor-link"></span></a>Transition Fade</h1>
+        </section>
+        <section data-transition="slide">
+            <h1><a href="#transition-slide" name="transition-slide" class="anchor"><span class="anchor-link"></span></a>Transition Slide</h1>
+        </section>
+        <section data-transition="convex">
+            <h1><a href="#transition-convex" name="transition-convex" class="anchor"><span class="anchor-link"></span></a>Transition Convex</h1>
+        </section>
+        <section data-transition="concave">
+            <h1><a href="#transition-concave" name="transition-concave" class="anchor"><span class="anchor-link"></span></a>Transition Concave</h1>
+        </section>
+        <section data-transition="zoom">
+            <h1><a href="#transition-zoom" name="transition-zoom" class="anchor"><span class="anchor-link"></span></a>Transition Zoom</h1>
+        </section><!-- Example of slide backgrounds -->
+        <section>
+            <section data-background="#dddddd">
+                <h2><a href="#slide-backgrounds" name="slide-backgrounds" class="anchor"><span class="anchor-link"></span></a>Slide Backgrounds</h2>
+                <p>Set <code>{ background=#dddddd }</code> on a slide to change the background</p>
+                <p><a href="vertical_slides.md#"><img src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="logo" /></a></p>
+            </section>
+            <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
+                <h2><a href="#image-backgrounds" name="image-backgrounds" class="anchor"><span class="anchor-link"></span></a>Image Backgrounds</h2>
+                <p><code>{ background=&#39;image.png&#39; }</code></p>
+            </section>
+            <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-Size="100px">
+                <h2><a href="#image-backgrounds" name="image-backgrounds" class="anchor"><span class="anchor-link"></span></a>Image Backgrounds</h2>
+                <p><code>{ background=&#39;image.png&#39; }</code></p>
+            </section>
+        </section><section>
+        <h2><a href="#clever-quotes" name="clever-quotes" class="anchor"><span class="anchor-link"></span></a>Clever Quotes</h2>
+        <p>These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The nice thing about standards is that there are so many to choose from</q> and block:
+
+        </p>
+        <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+            <p>&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;</p>
+        </blockquote>
+    </section>
+    </div>
+</div>
+
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        transition: 'slide',
+        dependencies: [
+            { src: 'plugin/markdown/marked.js' },
+            { src: 'plugin/markdown/markdown.js' },
+            { src: 'plugin/notes/notes.js', async: true },
+            { src: 'plugin/highlight/highlight.js', async: true }
+        ]
+    });
+</script>
+
+</body>
+
+</html>
