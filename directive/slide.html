@@ -151,16 +151,53 @@ sfxcode/sbt-paradox-reveal
   <li><a href="../demo.html" class="page">Demo</a></li>
 </ul>
 <nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../directive/slide.html#slide-directive" class="header">Slide Directive</a>
+  <ul>
+    <li><a href="../directive/slide.html#vertical-slides" class="header">Vertical Slides</a></li>
+    <li><a href="../directive/slide.html#configuration-options" class="header">Configuration Options</a></li>
+    <li><a href="../directive/slide.html#basic-configuration" class="header">Basic Configuration</a></li>
+    <li><a href="../directive/slide.html#slide-transition" class="header">Slide Transition</a></li>
+    <li><a href="../directive/slide.html#color-background" class="header">Color Background</a></li>
+    <li><a href="../directive/slide.html#image-background" class="header">Image Background</a></li>
+    <li><a href="../directive/slide.html#video-background" class="header">Video Background</a></li>
+    <li><a href="../directive/slide.html#iframe-background" class="header">Iframe Background</a></li>
+  </ul></li>
+</ul>
 </nav>
 
 </nav>
 <ul style="display: none">
 <li class="md-nav__item md-version" id="project.version">
 <label class="md-nav__link" for="__version">
-<i class="md-icon" title="Version">label_outline</i> 1.0.1
+<i class="md-icon" title="Version">label_outline</i> 1.0.2
 </label>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../directive/slide.html#slide-directive" class="header">Slide Directive</a>
+  <ul>
+    <li><a href="../directive/slide.html#vertical-slides" class="header">Vertical Slides</a></li>
+    <li><a href="../directive/slide.html#configuration-options" class="header">Configuration Options</a></li>
+    <li><a href="../directive/slide.html#basic-configuration" class="header">Basic Configuration</a></li>
+    <li><a href="../directive/slide.html#slide-transition" class="header">Slide Transition</a></li>
+    <li><a href="../directive/slide.html#color-background" class="header">Color Background</a></li>
+    <li><a href="../directive/slide.html#image-background" class="header">Image Background</a></li>
+    <li><a href="../directive/slide.html#video-background" class="header">Video Background</a></li>
+    <li><a href="../directive/slide.html#iframe-background" class="header">Iframe Background</a></li>
+  </ul></li>
+</ul>
+</nav>
+
 </div>
 </div>
 </div>
@@ -168,15 +205,171 @@ sfxcode/sbt-paradox-reveal
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
 <h1><a href="#slide-directive" name="slide-directive" class="anchor"><span class="anchor-link"></span></a>Slide Directive</h1>
+<p>The basic of all presentations is the slide directive.</p>
+<p>Basic example:</p>
+<pre><code>@@@ slide
+# My Presentation
+This Preasentation was made by Paradox and reveal.js
+@@@
+</code></pre>
+<h2><a href="#vertical-slides" name="vertical-slides" class="anchor"><span class="anchor-link"></span></a>Vertical Slides</h2>
+<p>Use Paradox default pattern for nesting slides.</p>
+<pre><code><br/>@@@ slide
+
+@@@@ slide
+## Vertical Slides
+Slides can be nested inside of each other.
+@@@@
+
+@@@
+
+</code></pre>
+<h2><a href="#configuration-options" name="configuration-options" class="anchor"><span class="anchor-link"></span></a>Configuration Options</h2>
+<p>Slides can be configured by several configuration options. All options are optional by default.</p>
+<h2><a href="#basic-configuration" name="basic-configuration" class="anchor"><span class="anchor-link"></span></a>Basic Configuration</h2>
+<ul>
+  <li>id</li>
+  <li>class</li>
+  <li>style</li>
+</ul>
+<p>For <a href="https://github.com/hakimel/reveal.js#internal-links">internal navigation between slides</a> use the id option.</p>
+<pre><code>@@@ slide { id=my-slide }
+Slide with custom id
+@@@
+</code></pre>
+<h2><a href="#slide-transition" name="slide-transition" class="anchor"><span class="anchor-link"></span></a>Slide Transition</h2>
+<p>Every slide transition can be indivudual configured.</p>
+<ul>
+  <li>transition (value can be: none, fade, slide, convex, concave, zoom)</li>
+  <li>transitionSpeed (value can be: normal, slow, fast)</li>
+</ul>
+<p>Example:</p>
+<pre><code>@@@ slide { transition=zoom transitionSpeed=fast }
+Slide with custom transition
+@@@
+
+</code></pre>
+<h2><a href="#color-background" name="color-background" class="anchor"><span class="anchor-link"></span></a>Color Background</h2>
+<p>All CSS color formats are supported, including hex values, keywords, rgba() or hsl().</p>
+<ul>
+  <li>color</li>
+</ul>
+<pre><code>{ color=#dddddd }
+</code></pre>
+<h2><a href="#image-background" name="image-background" class="anchor"><span class="anchor-link"></span></a>Image Background</h2>
+<p>By default, background images are resized to cover the full page. Available options:</p>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Attribute </th>
+      <th align="left">Default </th>
+      <th align="left">Description </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">image </td>
+      <td align="left"> </td>
+      <td align="left">URL of the image to show. GIFs restart when the slide opens. </td>
+    </tr>
+    <tr>
+      <td align="left">size </td>
+      <td align="left">cover </td>
+      <td align="left">See <a href="https://developer.mozilla.org/docs/Web/CSS/background-size">background-size</a> on MDN. </td>
+    </tr>
+    <tr>
+      <td align="left">position </td>
+      <td align="left">center </td>
+      <td align="left">See <a href="https://developer.mozilla.org/docs/Web/CSS/background-position">background-position</a> on MDN. </td>
+    </tr>
+    <tr>
+      <td align="left">repeat </td>
+      <td align="left">no-repeat </td>
+      <td align="left">See <a href="https://developer.mozilla.org/docs/Web/CSS/background-repeat">background-repeat</a> on MDN. </td>
+    </tr>
+    <tr>
+      <td align="left">opacity </td>
+      <td align="left">1 </td>
+      <td align="left">Opacity of the background image on a 0-1 scale. 0 is transparent and 1 is fully opaque. </td>
+    </tr>
+  </tbody>
+</table>
+<p>Example:</p>
+<pre><code><br/>@@@@ slide { repeat=true size=cover image=&#39;https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png&#39; }
+## Image Backgrounds
+@@@@
+
+</code></pre>
+<h2><a href="#video-background" name="video-background" class="anchor"><span class="anchor-link"></span></a>Video Background</h2>
+<p>Automatically plays a full size video behind the slide.</p>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Attribute </th>
+      <th align="left">Default </th>
+      <th align="left">Description </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">video </td>
+      <td align="left"> </td>
+      <td align="left">A single video source, or a comma separated list of video sources. </td>
+    </tr>
+    <tr>
+      <td align="left">loop </td>
+      <td align="left">false </td>
+      <td align="left">Flags if the video should play repeatedly. </td>
+    </tr>
+    <tr>
+      <td align="left">muted </td>
+      <td align="left">false </td>
+      <td align="left">Flags if the audio should be muted. </td>
+    </tr>
+    <tr>
+      <td align="left">size </td>
+      <td align="left">cover </td>
+      <td align="left">Use <code>cover</code> for full screen and some cropping or <code>contain</code> for letterboxing. </td>
+    </tr>
+    <tr>
+      <td align="left">opacity </td>
+      <td align="left">1 </td>
+      <td align="left">Opacity of the background video on a 0-1 scale. 0 is transparent and 1 is fully opaque. </td>
+    </tr>
+  </tbody>
+</table>
+<h2><a href="#iframe-background" name="iframe-background" class="anchor"><span class="anchor-link"></span></a>Iframe Background</h2>
+<p>Embeds a web page as a slide background that covers 100% of the reveal.js width and height. The iframe is in the background layer, behind your slides, and as such it&rsquo;s not possible to interact with it by default. To make your background interactive, you can add interactive attribute.</p>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Attribute </th>
+      <th align="left">Default </th>
+      <th align="left">Description </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">iframe </td>
+      <td align="left"> </td>
+      <td align="left">A single video source, or a comma separated list of video sources. </td>
+    </tr>
+    <tr>
+      <td align="left">interactive </td>
+      <td align="left">false </td>
+      <td align="left">Flags if the video should play repeatedly. </td>
+    </tr>
+  </tbody>
+</table>
 </div>
 <div>
-<a href="https://github.com/sfxcode/sbt-paradox-reveal/tree/v1.0.1/docs/src/main/paradox/directive/slide.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/sfxcode/sbt-paradox-reveal/tree/v1.0.2/docs/src/main/paradox/directive/slide.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>
 <div class="print-only">
 <span class="md-source-file md-version">
-1.0.1
+1.0.2
 </span>
 </div>
 </article>

@@ -151,16 +151,43 @@ sfxcode/sbt-paradox-reveal
   <li><a href="../demo.html" class="page">Demo</a></li>
 </ul>
 <nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../directive/quote.html#quote-directive" class="header">Quote Directive</a>
+  <ul>
+    <li><a href="../directive/quote.html#configuration" class="header">Configuration</a></li>
+    <li><a href="../directive/quote.html#block-quotes" class="header">Block Quotes</a></li>
+    <li><a href="../directive/quote.html#inline-quotes" class="header">Inline Quotes</a></li>
+  </ul></li>
+</ul>
 </nav>
 
 </nav>
 <ul style="display: none">
 <li class="md-nav__item md-version" id="project.version">
 <label class="md-nav__link" for="__version">
-<i class="md-icon" title="Version">label_outline</i> 1.0.1
+<i class="md-icon" title="Version">label_outline</i> 1.0.2
 </label>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../directive/quote.html#quote-directive" class="header">Quote Directive</a>
+  <ul>
+    <li><a href="../directive/quote.html#configuration" class="header">Configuration</a></li>
+    <li><a href="../directive/quote.html#block-quotes" class="header">Block Quotes</a></li>
+    <li><a href="../directive/quote.html#inline-quotes" class="header">Inline Quotes</a></li>
+  </ul></li>
+</ul>
+</nav>
+
 </div>
 </div>
 </div>
@@ -168,15 +195,59 @@ sfxcode/sbt-paradox-reveal
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
 <h1><a href="#quote-directive" name="quote-directive" class="anchor"><span class="anchor-link"></span></a>Quote Directive</h1>
+<p>Useful for rendering quotes on your slide.</p>
+<h2><a href="#configuration" name="configuration" class="anchor"><span class="anchor-link"></span></a>Configuration</h2>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Attribute </th>
+      <th align="left">Default </th>
+      <th align="left">Description </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">cite </td>
+      <td align="left"><a href="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations</a> </td>
+      <td align="left"> </td>
+    </tr>
+    <tr>
+      <td align="left">separator </td>
+      <td align="left"># </td>
+      <td align="left">Used as inline quote separator </td>
+    </tr>
+  </tbody>
+</table>
+<h2><a href="#block-quotes" name="block-quotes" class="anchor"><span class="anchor-link"></span></a>Block Quotes</h2>
+<pre><code>@@@ slide
+## Clever Quotes
+
+@@@@ quote
+&amp;ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&amp;rdquo;
+@@@@
+
+@@@
+</code></pre>
+<h2><a href="#inline-quotes" name="inline-quotes" class="anchor"><span class="anchor-link"></span></a>Inline Quotes</h2>
+<pre><code>@@@ slide
+## Clever Quotes
+
+@@@@ quote
+Inline: #The nice thing about standards is that there are so many to choose from# and block:
+@@@@
+
+@@@
+</code></pre>
 </div>
 <div>
-<a href="https://github.com/sfxcode/sbt-paradox-reveal/tree/v1.0.1/docs/src/main/paradox/directive/quote.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/sfxcode/sbt-paradox-reveal/tree/v1.0.2/docs/src/main/paradox/directive/quote.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>
 <div class="print-only">
 <span class="md-source-file md-version">
-1.0.1
+1.0.2
 </span>
 </div>
 </article>
