@@ -25,7 +25,7 @@ and **Reveal.js** for
 
 * [Slides](https://revealjs.com/#/1)
 * [HTML Transtions](https://revealjs.com/#/transitions)
-* [Speager Notes](https://revealjs.com/#/20)
+* [Speaker Notes](https://revealjs.com/#/20)
 
 it is easy to create a presentation with code examples in short time.
 

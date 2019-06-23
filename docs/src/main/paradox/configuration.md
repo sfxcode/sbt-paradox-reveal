@@ -18,7 +18,7 @@ Compile / paradoxRevealTheme ~= {
 * ThemeBlack
 * ThemeBlood
 * ThemeLeague
-* ThemeMoonm
+* ThemeMoon
 * ThemeNight
 * ThemeSerif
 * ThemeSimple
