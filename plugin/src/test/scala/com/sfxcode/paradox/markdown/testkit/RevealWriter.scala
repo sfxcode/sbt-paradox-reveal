@@ -3,7 +3,6 @@ package com.sfxcode.paradox.markdown.testkit
 import com.lightbend.paradox.markdown.Writer.Context
 import com.lightbend.paradox.markdown._
 import com.sfxcode.paradox.reveal.markdown.directive.{FragmentsDirective, NotesDirective, SlideDirective}
-import com.sfxcode.paradox.reveal.markdown.serializer.PlainAnchorLinkSerializer
 import org.pegdown.plugins.ToHtmlSerializerPlugin
 import org.pegdown.{LinkRenderer, ToHtmlSerializer, VerbatimSerializer}
 import RevealWriter._
