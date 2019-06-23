@@ -7,9 +7,10 @@ import org.pegdown.ast._
 case class QuoteDirective(name: String) extends ContainerBlockDirective(Array(name): _*) {
   def render(node: DirectiveNode, visitor: Visitor, printer: Printer): Unit = {
     val cite = node.attributes.value("cite", "http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations")
+    val separator = node.attributes.value("separator", "#")
 
     val contents = node.contents
-    val separatorIndex = contents.indexOf("#")
+    val separatorIndex = contents.indexOf(separator)
 
     if (separatorIndex == -1 && contents.length > separatorIndex) {
       printer.println()
