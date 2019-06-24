@@ -35,8 +35,8 @@ This plugin requires sbt 1.0.0+
 
 Install plugin in project/plugins.sbt:
 
-``` addSbtPlugin("com.sfxcode.paradox" % "sbt-paradox-reveal" %
-"$project.version$")
+```
+addSbtPlugin("com.sfxcode.paradox" % "sbt-paradox-reveal" % 1.0.3)
 ```
 
 Enable Plugin in your build.sbt file:
