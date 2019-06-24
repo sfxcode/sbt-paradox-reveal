@@ -9,7 +9,7 @@ Hit the next arrow...
 
 @@@@ fragments
 ... to step through ...
-... a # fragmented # slide
+... a -=- fragmented -=- slide
 @@@@
 
 @@@@ notes

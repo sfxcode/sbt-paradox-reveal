@@ -2,7 +2,7 @@ package com.sfxcode.paradox.markdown.testkit
 
 import com.lightbend.paradox.markdown.Writer.Context
 import com.lightbend.paradox.markdown._
-import com.sfxcode.paradox.reveal.markdown.directive.{FragmentsDirective, NotesDirective, SlideDirective}
+import com.sfxcode.paradox.reveal.markdown.directive.{FragmentsDirective, NotesDirective, QuoteDirective, SlideDirective}
 import org.pegdown.plugins.ToHtmlSerializerPlugin
 import org.pegdown.{LinkRenderer, ToHtmlSerializer, VerbatimSerializer}
 import RevealWriter._
@@ -50,7 +50,8 @@ object RevealWriter {
     context => IncludeDirective(context.location.tree.label, context.properties),
     context => SlideDirective("slide"),
     context => FragmentsDirective("fragments"),
-    context => NotesDirective("notes")
+    context => NotesDirective("notes"),
+    context => QuoteDirective("quote")
   )
 
 }
