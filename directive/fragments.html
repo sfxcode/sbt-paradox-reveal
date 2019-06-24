@@ -151,16 +151,45 @@ sfxcode/sbt-paradox-reveal
   <li><a href="../demo.html" class="page">Demo</a></li>
 </ul>
 <nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../directive/fragments.html#fragments-directive" class="header">Fragments Directive</a>
+  <ul>
+    <li><a href="../directive/fragments.html#configuration" class="header">Configuration</a></li>
+    <li><a href="../directive/fragments.html#simple-example" class="header">Simple Example</a></li>
+    <li><a href="../directive/fragments.html#line-parts-example" class="header">Line Parts Example</a></li>
+    <li><a href="../directive/fragments.html#in-and-out-example" class="header">In and Out Example</a></li>
+  </ul></li>
+</ul>
 </nav>
 
 </nav>
 <ul style="display: none">
 <li class="md-nav__item md-version" id="project.version">
 <label class="md-nav__link" for="__version">
-<i class="md-icon" title="Version">label_outline</i> 1.0.2
+<i class="md-icon" title="Version">label_outline</i> 1.0.3
 </label>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../directive/fragments.html#fragments-directive" class="header">Fragments Directive</a>
+  <ul>
+    <li><a href="../directive/fragments.html#configuration" class="header">Configuration</a></li>
+    <li><a href="../directive/fragments.html#simple-example" class="header">Simple Example</a></li>
+    <li><a href="../directive/fragments.html#line-parts-example" class="header">Line Parts Example</a></li>
+    <li><a href="../directive/fragments.html#in-and-out-example" class="header">In and Out Example</a></li>
+  </ul></li>
+</ul>
+</nav>
+
 </div>
 </div>
 </div>
@@ -168,15 +197,83 @@ sfxcode/sbt-paradox-reveal
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
 <h1><a href="#fragments-directive" name="fragments-directive" class="anchor"><span class="anchor-link"></span></a>Fragments Directive</h1>
+<p>Easy use of <a href="https://github.com/hakimel/reveal.js#fragments">reveal.js fragments</a>.</p>
+<p>Each line can be used as</p>
+<ul>
+  <li>Fragment line</li>
+  <li>Fragment Parts in one line</li>
+  <li>Fragment line with in and out transition</li>
+</ul>
+<h2><a href="#configuration" name="configuration" class="anchor"><span class="anchor-link"></span></a>Configuration</h2>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Attribute </th>
+      <th align="left">Default </th>
+      <th align="left">Description </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">transition </td>
+      <td align="left"> </td>
+      <td align="left">line transition </td>
+    </tr>
+    <tr>
+      <td align="left">index </td>
+      <td align="left"> </td>
+      <td align="left">set data-fragment-index for each line </td>
+    </tr>
+    <tr>
+      <td align="left">separator </td>
+      <td align="left">-=- </td>
+      <td align="left">used for fragment parts in one line </td>
+    </tr>
+    <tr>
+      <td align="left">partTransition </td>
+      <td align="left">transition </td>
+      <td align="left">line part transition </td>
+    </tr>
+    <tr>
+      <td align="left">outTransition </td>
+      <td align="left"> </td>
+      <td align="left">line with in and out transition </td>
+    </tr>
+  </tbody>
+</table>
+<h2><a href="#simple-example" name="simple-example" class="anchor"><span class="anchor-link"></span></a>Simple Example</h2>
+<pre><code>@@@ slide
+# Hallo
+@@@@ fragments
+Fragment1
+Fragment2
+@@@@
+@@@
+</code></pre>
+<h2><a href="#line-parts-example" name="line-parts-example" class="anchor"><span class="anchor-link"></span></a>Line Parts Example</h2>
+<pre><code>@@@ slide
+@@@@ fragments { transition=grow partTransition=fade-in }
+Fragment
+FragmentPart1 -=- FragmentPart2
+@@@@
+@@@
+</code></pre>
+<h2><a href="#in-and-out-example" name="in-and-out-example" class="anchor"><span class="anchor-link"></span></a>In and Out Example</h2>
+<pre><code>@@@ slide
+@@@@ fragments { transition=fade-in outTransition=fade-out }
+Fragment
+@@@@
+@@@
+</code></pre>
 </div>
 <div>
-<a href="https://github.com/sfxcode/sbt-paradox-reveal/tree/v1.0.2/docs/src/main/paradox/directive/fragments.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/sfxcode/sbt-paradox-reveal/tree/v1.0.3/docs/src/main/paradox/directive/fragments.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>
 <div class="print-only">
 <span class="md-source-file md-version">
-1.0.2
+1.0.3
 </span>
 </div>
 </article>
