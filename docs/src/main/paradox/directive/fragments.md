@@ -23,7 +23,7 @@ Each line can be used as
 
 ```
 @@@ slide
-# Hallo
+# Hello World
 @@@@ fragments
 Fragment1
 Fragment2

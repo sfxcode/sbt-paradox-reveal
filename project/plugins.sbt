@@ -2,7 +2,7 @@ libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % sbtVersion.value
 
 // updates, release
 
-addSbtPlugin("org.foundweekends" % "sbt-bintray" % "0.5.4")
+addSbtPlugin("org.foundweekends" % "sbt-bintray" % "0.5.5")
 
 addSbtPlugin("com.github.gseitz" % "sbt-release" % "1.0.11")
 
@@ -19,4 +19,4 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-site" % "1.4.0")
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-ghpages" % "0.6.3")
 
-addSbtPlugin("com.sfxcode.paradox" % "sbt-paradox-reveal" % "0.9.1")
+addSbtPlugin("com.sfxcode.paradox" % "sbt-paradox-reveal" % "1.0.4")

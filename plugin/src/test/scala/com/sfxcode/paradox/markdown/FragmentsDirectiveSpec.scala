@@ -16,7 +16,7 @@ class FragmentsDirectiveSpec extends MarkdownBaseSpec   {
 
       val markdownString = markdown("""
                                       |@@@ slide
-                                      |# Hallo
+                                      |# Hello
                                       |@@@@ fragments
                                       |Fragment1
                                       |Fragment2
@@ -25,7 +25,7 @@ class FragmentsDirectiveSpec extends MarkdownBaseSpec   {
                                       |""")
       val htmlString = html("""
                               |<section>
-                              |<h1><a href="#hallo" name="hallo" class="anchor"><span class="anchor-link"></span></a>Hallo</h1>
+                              |<h1><a href="#hello" name="hello" class="anchor"><span class="anchor-link"></span></a>Hello</h1>
                               |<p class="fragment">Fragment1</p>
                               |<p class="fragment">Fragment2</p>
                               |</section>

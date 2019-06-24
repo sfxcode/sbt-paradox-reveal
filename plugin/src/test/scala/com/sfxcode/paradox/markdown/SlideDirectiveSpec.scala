@@ -16,14 +16,14 @@ class SlideDirectiveSpec extends MarkdownBaseSpec   {
 
       val markdownString = markdown("""
                                       |@@@ slide
-                                      |# Hallo
+                                      |# Hello
                                       |* Version @var[version] is deprecated!
                                       |* Topic2
                                       |@@@
                                       |""")
       val htmlString = html("""
                               |<section>
-                              |<h1><a href="#hallo" name="hallo" class="anchor"><span class="anchor-link"></span></a>Hallo</h1>
+                              |<h1><a href="#hello" name="hello" class="anchor"><span class="anchor-link"></span></a>Hello</h1>
                               |<ul>
                               |  <li>Version 1.2.3 is deprecated!</li>
                               |  <li>Topic2</li>
