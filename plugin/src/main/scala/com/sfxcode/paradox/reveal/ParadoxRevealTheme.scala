@@ -18,6 +18,9 @@ case class ParadoxRevealTheme(properties: Map[String, String]) {
   def withCustomJavaScript(path: String) =
     withProperties("custom.javascript" -> path)
 
+  def withMathPlugin() =
+    withProperties("plugin.math" -> "true")
+
 
   def paradoxProperties(): Map[String, String] =
     properties.map(p => s"reveal.${p._1}" -> p._2)

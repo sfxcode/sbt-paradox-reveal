@@ -36,6 +36,8 @@ Presentations look great on touch devices, like mobile phones and tablets. Simpl
 
 @@include[code.md](includes/code.md)
 
+@@include[math.md](includes/math.md)
+
 @@include[fragments.md](includes/fragments.md)
 
 @@include[transitions.md](includes/transitions.md)
@@ -43,5 +45,6 @@ Presentations look great on touch devices, like mobile phones and tablets. Simpl
 @@include[backgrounds.md](includes/backgrounds.md)
 
 @@include[quotes.md](includes/quotes.md)
+
 
 

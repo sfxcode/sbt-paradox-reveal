@@ -5,9 +5,12 @@
     Reveal.initialize({
         transition: '$page.properties.("reveal.default.transition")$',
         dependencies: [
-            { src: 'plugin/markdown/marked.js' },
-            { src: 'plugin/markdown/markdown.js' },
+            { src: 'plugin/search/search.js', async: true },
+            { src: 'plugin/zoom-js/zoom.js', async: true },
             { src: 'plugin/notes/notes.js', async: true },
+            $ if (page.properties.("reveal.plugin.math")) $
+             { src: '../../plugin/math/math.js', async: true },
+            $ endif $
             { src: 'plugin/highlight/highlight.js', async: true }
         ]
     });

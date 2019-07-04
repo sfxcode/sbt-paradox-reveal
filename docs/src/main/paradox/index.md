@@ -38,6 +38,7 @@ it is easy to create a presentation with code examples in short time.
 - [Start](getting_started.md)
 - [Configuration](configuration.md)
 - [Directives](directive/index.md)
+- [Plugins](plugins/index.md)
 - [Demo](demo.md)
 
 @@@

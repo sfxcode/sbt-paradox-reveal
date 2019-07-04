@@ -18,7 +18,7 @@ on a slide to change the background
 @@@@
 
 @@@@ slide { repeat=true size=cover image='https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png' }
-## Image Backgrounds
+## Image Backgrounds Repeat
 ``` { image='image.png' } ```
 @@@@
 
