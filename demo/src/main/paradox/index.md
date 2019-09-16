@@ -47,4 +47,16 @@ Presentations look great on touch devices, like mobile phones and tablets. Simpl
 @@include[quotes.md](includes/quotes.md)
 
 
+@@@ index
+
+- [backgrounds](includes/backgrounds.md)
+- [code](includes/code.md)
+- [fragments](includes/fragments.md)
+- [math](includes/math.md)
+- [quotes](includes/quotes.md)
+- [transitions](includes/transitions.md)
+- [vertical_slides](includes/vertical_slides.md)
+
+@@@
+
 

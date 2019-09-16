@@ -7,9 +7,9 @@ import scala.collection.JavaConverters._
 
 inThisBuild(List(
   organization := "com.sfxcode.paradox",
-  version := "1.0.5-SNAPSHOT",
+  version := "1.0.6-SNAPSHOT",
   licenses += "Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.html"),
-  scalaVersion := "2.12.8",
+  scalaVersion := "2.12.10",
   bintrayPackageLabels := Seq("sbt", "plugin", "paradox", "reveal.js"),
 
   organizationName := "sfxcode",
@@ -81,7 +81,6 @@ lazy val docs = (project in file("docs"))
   .settings(
     name := "paradox reveal docs",
     publish / skip := true,
-    paradoxExpectedNumberOfRoots := 4,
     git.remoteRepo := "git@github.com:sfxcode/sbt-paradox-reveal.git",
 
     Compile / paradoxMaterialTheme ~= {
@@ -98,7 +97,6 @@ lazy val demo = (project in file("demo"))
   .settings(
     name := "paradox reveal demo",
     publish / skip := true,
-    paradoxExpectedNumberOfRoots := 8,
     Compile / paradoxRevealTheme ~= {
       _.withTheme(ParadoxRevealTheme.ThemeSerif)
         .withDefaultTransition(ParadoxRevealTheme.TransitionFade)

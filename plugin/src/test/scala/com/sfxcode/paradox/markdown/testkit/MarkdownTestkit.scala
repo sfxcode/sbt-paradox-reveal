@@ -3,8 +3,8 @@ package com.sfxcode.paradox.markdown.testkit
 import java.io.{File, PrintWriter}
 import java.nio.file._
 
-import com.lightbend.paradox.ParadoxProcessor
-import com.lightbend.paradox.markdown._
+import com.lightbend.paradox.{NullLogger, ParadoxProcessor, ThrowingErrorContext}
+import com.lightbend.paradox.markdown.{Path, _}
 import com.lightbend.paradox.template.PageTemplate
 import com.lightbend.paradox.tree.Tree.{Forest, Location}
 
@@ -26,14 +26,12 @@ class MarkdownTestkit {
         render(loc.next, rendered :+ (page.path, html))
       case None => rendered
     }
-
     render(Location.forest(pages(mappings: _*))).toMap
   }
 
   def layoutPages(mappings: (String, String)*)(templates: (String, String)*)(implicit context: Location[Page] => Writer.Context = writerContext): Map[String, String] = {
     val templateDirectory = Files.createTempDirectory("templates")
     createFileTemplates(templateDirectory, templates)
-
     def render(location: Option[Location[Page]], rendered: Seq[(String, String)] = Seq.empty): Seq[(String, String)] = location match {
       case Some(loc) =>
         val page = loc.tree.label
@@ -41,13 +39,12 @@ class MarkdownTestkit {
         val outputFile = new File(page.path)
         val emptyPageContext = PartialPageContent(page.properties.get, html)
         val template = new PageTemplate(new File(templateDirectory.toString))
-        template.write(page.properties(Page.Properties.DefaultLayoutMdIndicator, template.defaultName), emptyPageContext, outputFile, new PageTemplate.ErrorLogger(s => println("[error] " + s)))
+        template.write(page.properties(Page.Properties.DefaultLayoutMdIndicator, template.defaultName), emptyPageContext, outputFile)
         val fileContent = fileToContent(outputFile)
         outputFile.delete
         render(loc.next, rendered :+ (page.path, normalize(fileContent)))
       case None => rendered
     }
-
     render(Location.forest(pages(mappings: _*))).toMap
   }
 
@@ -75,9 +72,11 @@ class MarkdownTestkit {
   def writerContext(location: Location[Page]): Writer.Context = {
     Writer.Context(
       location,
-      Page.allPaths(List(location.root.tree)).toSet,
+      Page.allPages(List(location.root.tree)),
       markdownReader,
       markdownWriter,
+      new ThrowingErrorContext,
+      NullLogger,
       groups = Map("Language" -> Seq("Scala", "Java")),
       properties = globalProperties
     )
@@ -88,9 +87,9 @@ class MarkdownTestkit {
       case (path, text) =>
         val frontin = Frontin(prepare(text))
         val file = new File(path)
-        (new File(path), path, paradoxProcessor.parseAndProcessMarkdown(file, frontin.body, globalProperties ++ frontin.header), frontin.header)
+        (new File(path), path, paradoxProcessor.parseAndProcessMarkdown(file, frontin.body, globalProperties ++ frontin.header, new ThrowingErrorContext), frontin.header)
     }
-    Page.forest(parsed, com.lightbend.paradox.markdown.Path.replaceSuffix(Writer.DefaultSourceSuffix, Writer.DefaultTargetSuffix), globalProperties)
+    Page.forest(parsed, Path.replaceSuffix(Writer.DefaultSourceSuffix, Writer.DefaultTargetSuffix), globalProperties)
   }
 
   def html(text: String): String = {
@@ -119,7 +118,6 @@ class MarkdownTestkit {
   }
 
   case class PartialPageContent(properties: Map[String, String], content: String) extends PageTemplate.Contents {
-
     import scala.collection.JavaConverters._
 
     val getTitle = ""
@@ -144,6 +142,5 @@ class MarkdownTestkit {
     lazy val getTitle: String = ""
     lazy val isActive: Boolean = false
   }
-
 
 }

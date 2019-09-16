@@ -9,9 +9,9 @@ addSbtPlugin("com.github.gseitz" % "sbt-release" % "1.0.11")
 addSbtPlugin("com.typesafe.sbt" % "sbt-license-report" % "1.2.0")
 
 // paradox
-addSbtPlugin("com.lightbend.paradox" % "sbt-paradox" % "0.6.0")
+addSbtPlugin("com.lightbend.paradox" % "sbt-paradox" % "0.6.5")
 
-addSbtPlugin("com.lightbend.paradox" % "sbt-paradox-theme" % "0.6.0")
+addSbtPlugin("com.lightbend.paradox" % "sbt-paradox-theme" % "0.6.5")
 
 addSbtPlugin("io.github.jonas" % "sbt-paradox-material-theme" % "0.6.0")
 
