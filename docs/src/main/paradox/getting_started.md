@@ -2,7 +2,14 @@
 
 ## Setup
 
-@@include[usage.md](includes/usage.md)
+Install plugin in project/plugins.sbt:
+
+
+**addSbtPlugin("com.sfxcode.paradox" % "sbt-paradox-reveal" % "$project.version$")**
+
+Enable Plugin in your build.sbt file:
+
+**enablePlugins(ParadoxRevealPlugin)**
 
 ## Write markdown using reveal directives
 

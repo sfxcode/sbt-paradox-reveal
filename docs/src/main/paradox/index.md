@@ -30,8 +30,14 @@ and **Reveal.js** for
 it is easy to create a presentation with code examples in short time.
 ## Usage
 
-@@include[usage.md](includes/usage.md)
+Install plugin in project/plugins.sbt:
 
+
+**addSbtPlugin("com.sfxcode.paradox" % "sbt-paradox-reveal" % "$project.version$")**
+
+Enable Plugin in your build.sbt file:
+
+**enablePlugins(ParadoxRevealPlugin)**
 
 @@@ index
 
@@ -39,6 +45,7 @@ it is easy to create a presentation with code examples in short time.
 - [Configuration](configuration.md)
 - [Directives](directive/index.md)
 - [Plugins](plugins/index.md)
+- [includes](includes.md)
 - [Demo](demo.md)
 
 @@@
