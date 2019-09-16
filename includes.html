@@ -19,22 +19,22 @@
 
 
 <meta name="description" content="Paradox Reveal is a paradox plugin for reveal.js presentations.">
-<link rel="shortcut icon" href="../assets/images/favicon.png">
-<title></title>
-<link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
-<link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+<link rel="shortcut icon" href="assets/images/favicon.png">
+<title>Includes · Paradox Reveal Theme</title>
+<link rel="stylesheet" href="assets/stylesheets/application.451f80e5.css">
+<link rel="stylesheet" href="assets/stylesheets/application-palette.22915126.css">
 <meta name="theme-color" content="#009688" />
-<link rel="stylesheet" href="../lib/material__tabs/dist/mdc.tabs.min.css">
-<link rel="stylesheet" href="../lib/prettify/prettify.css">
-<script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+<link rel="stylesheet" href="lib/material__tabs/dist/mdc.tabs.min.css">
+<link rel="stylesheet" href="lib/prettify/prettify.css">
+<script src="assets/javascripts/modernizr.1aa3b519.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
 <style>
 body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}
 code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}
 </style>
-<link rel="stylesheet" href="../assets/fonts/font-awesome.css">
-<link rel="stylesheet" href="../assets/fonts/material-icons.css">
-<link rel="stylesheet" href="../assets/stylesheets/paradox-material-theme.css">
+<link rel="stylesheet" href="assets/fonts/font-awesome.css">
+<link rel="stylesheet" href="assets/fonts/material-icons.css">
+<link rel="stylesheet" href="assets/stylesheets/paradox-material-theme.css">
 </head>
 <body
 data-md-color-primary="teal"
@@ -47,7 +47,7 @@ data-md-color-accent="indigo"
 <nav class="md-header-nav md-grid">
 <div class="md-flex">
 <div class="md-flex__cell md-flex__cell--shrink">
-<a href="../includes/usage.html" title="" class="md-header-nav__button md-logo">
+<a href="index.html" title="Paradox Reveal Theme" class="md-header-nav__button md-logo">
 <i class="md-icon">local_library</i>
 </a>
 </div>
@@ -56,6 +56,12 @@ data-md-color-accent="indigo"
 </div>
 <div class="md-flex__cell md-flex__cell--stretch">
 <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+<span class="md-header-nav__topic">
+Paradox Reveal Theme
+</span>
+<span class="md-header-nav__topic">
+Includes
+</span>
 </div>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
@@ -110,11 +116,12 @@ sfxcode/sbt-paradox-reveal
 <div class="md-sidebar__inner">
 <nav class="md-nav md-nav--primary" data-md-level="0" style="visibility: hidden">
 <label class="md-nav__title md-nav__title--site" for="drawer">
-<a href="../includes/usage.html" title="" class="md-nav__button md-logo">
+<a href="index.html" title="Paradox Reveal Theme" class="md-nav__button md-logo">
 <span class="md-nav__button md-logo">
 <i class="md-icon">local_library</i>
 </a>
-<a href="../includes/usage.html" title="">
+<a href="index.html" title="Paradox Reveal Theme">
+Paradox Reveal Theme
 </a>
 </label>
 <div class="md-nav__source">
@@ -132,37 +139,96 @@ sfxcode/sbt-paradox-reveal
 
 </div>
 <ul>
+  <li><a href="getting_started.html" class="page">Getting Started</a></li>
+  <li><a href="configuration.html" class="page">Configuration</a></li>
+  <li><a href="directive/index.html" class="page">Directives</a>
+  <ul>
+    <li><a href="directive/slide.html" class="page">Slide Directive</a></li>
+    <li><a href="directive/notes.html" class="page">Notes Directive</a></li>
+    <li><a href="directive/fragments.html" class="page">Fragments Directive</a></li>
+    <li><a href="directive/quote.html" class="page">Quote Directive</a></li>
+  </ul></li>
+  <li><a href="plugins/index.html" class="page">Plugins</a>
+  <ul>
+    <li><a href="plugins/math.html" class="page">Math Plugin</a></li>
+  </ul></li>
+  <li><a href="includes.html" class="active page">Includes</a></li>
+  <li><a href="demo.html" class="page">Demo</a></li>
 </ul>
 <nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="includes.html#includes" class="header">Includes</a>
+  <ul>
+    <li><a href="includes.html#example" class="header">Example</a></li>
+  </ul></li>
+</ul>
 </nav>
 
 </nav>
 <ul style="display: none">
 <li class="md-nav__item md-version" id="project.version">
 <label class="md-nav__link" for="__version">
-<i class="md-icon" title="Version">label_outline</i> 1.0.4.1
+<i class="md-icon" title="Version">label_outline</i> 1.0.6*
 </label>
 </li>
 </ul>
 </div>
 </div>
 </div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="includes.html#includes" class="header">Includes</a>
+  <ul>
+    <li><a href="includes.html#example" class="header">Example</a></li>
+  </ul></li>
+</ul>
+</nav>
+
+</div>
+</div>
+</div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
-<p>Install plugin in project/plugins.sbt:</p>
-<p><strong>addSbtPlugin(&ldquo;com.sfxcode.paradox&rdquo; % &ldquo;sbt-paradox-reveal&rdquo; % &ldquo;1.0.4.1&rdquo;)</strong></p>
-<p>Enable Plugin in your build.sbt file:</p>
-<p><strong>enablePlugins(ParadoxRevealPlugin)</strong></p>
+<h1><a href="#includes" name="includes" class="anchor"><span class="anchor-link"></span></a>Includes</h1>
+<p>If you patition your slides in seperate markdown files, you need to create a index directive.</p>
+<p>Otherwise, you will see some kind of error like</p>
+<pre><code><br/>[error] Unexpected top-level pages (pages that do no have a parent in the Table of Contents).
+[error] If this is intentional, update the `paradoxRoots` sbt setting to reflect the new expected roots.
+[error] Current ToC roots: [includes/code.html, index.html]
+
+</code></pre>
+<h2><a href="#example" name="example" class="anchor"><span class="anchor-link"></span></a>Example</h2>
+<p>Example from the demo project:</p>
+<pre><code><br/>@@@ index
+
+- [backgrounds](../../../../demo/src/main/paradox/includes/backgrounds.md)
+- [code](../../../../demo/src/main/paradox/includes/code.md)
+- [fragments](../../../../demo/src/main/paradox/includes/fragments.md)
+- [math](../../../../demo/src/main/paradox/includes/math.md)
+- [quotes](../../../../demo/src/main/paradox/includes/quotes.md)
+- [transitions](../../../../demo/src/main/paradox/includes/transitions.md)
+- [vertical_slides](../../../../demo/src/main/paradox/includes/vertical_slides.md)
+
+@@@
+
+
+
+</code></pre>
 </div>
 <div>
-<a href="https://github.com/sfxcode/sbt-paradox-reveal/tree/v1.0.4.1/docs/src/main/paradox/includes/usage.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/sfxcode/sbt-paradox-reveal/tree/master/docs/src/main/paradox/includes.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>
 <div class="print-only">
 <span class="md-source-file md-version">
-1.0.4.1
+1.0.6*
 </span>
 </div>
 </article>
@@ -170,6 +236,36 @@ Edit this page
 </div>
 </main>
 <footer class="md-footer">
+<div class="md-footer-nav">
+<nav class="md-footer-nav__inner md-grid">
+<a href="plugins/math.html" title="Math Plugin" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+Previous
+</span>
+Math Plugin
+</span>
+</div>
+</a>
+<a href="demo.html" title="Demo" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+Next
+</span>
+Demo
+</span>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+</div>
+</a>
+</nav>
+</div>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-footer-copyright">
@@ -184,11 +280,11 @@ and
 </footer>
 
 </div>
-<script src="../assets/javascripts/application.583bbe55.js"></script>
-<script src="../assets/javascripts/paradox-material-theme.js"></script>
-<script>app.initialize({version:"0.17",url:{base:"../."}})</script>
-<script type="text/javascript" src="../lib/prettify/prettify.js"></script>
-<script type="text/javascript" src="../lib/prettify/lang-scala.js"></script>
+<script src="assets/javascripts/application.583bbe55.js"></script>
+<script src="assets/javascripts/paradox-material-theme.js"></script>
+<script>app.initialize({version:"0.17",url:{base:"."}})</script>
+<script type="text/javascript" src="lib/prettify/prettify.js"></script>
+<script type="text/javascript" src="lib/prettify/lang-scala.js"></script>
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function(event) {
 window.prettyPrint && prettyPrint();

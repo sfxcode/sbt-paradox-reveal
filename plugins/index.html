@@ -20,7 +20,7 @@
 
 <meta name="description" content="Paradox Reveal is a paradox plugin for reveal.js presentations.">
 <link rel="shortcut icon" href="../assets/images/favicon.png">
-<title></title>
+<title>Plugins · Paradox Reveal Theme</title>
 <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
 <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
 <meta name="theme-color" content="#009688" />
@@ -47,7 +47,7 @@ data-md-color-accent="indigo"
 <nav class="md-header-nav md-grid">
 <div class="md-flex">
 <div class="md-flex__cell md-flex__cell--shrink">
-<a href="../includes/usage.html" title="" class="md-header-nav__button md-logo">
+<a href="../index.html" title="Paradox Reveal Theme" class="md-header-nav__button md-logo">
 <i class="md-icon">local_library</i>
 </a>
 </div>
@@ -56,6 +56,12 @@ data-md-color-accent="indigo"
 </div>
 <div class="md-flex__cell md-flex__cell--stretch">
 <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+<span class="md-header-nav__topic">
+Paradox Reveal Theme
+</span>
+<span class="md-header-nav__topic">
+Plugins
+</span>
 </div>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
@@ -110,11 +116,12 @@ sfxcode/sbt-paradox-reveal
 <div class="md-sidebar__inner">
 <nav class="md-nav md-nav--primary" data-md-level="0" style="visibility: hidden">
 <label class="md-nav__title md-nav__title--site" for="drawer">
-<a href="../includes/usage.html" title="" class="md-nav__button md-logo">
+<a href="../index.html" title="Paradox Reveal Theme" class="md-nav__button md-logo">
 <span class="md-nav__button md-logo">
 <i class="md-icon">local_library</i>
 </a>
-<a href="../includes/usage.html" title="">
+<a href="../index.html" title="Paradox Reveal Theme">
+Paradox Reveal Theme
 </a>
 </label>
 <div class="md-nav__source">
@@ -132,37 +139,84 @@ sfxcode/sbt-paradox-reveal
 
 </div>
 <ul>
+  <li><a href="../getting_started.html" class="page">Getting Started</a></li>
+  <li><a href="../configuration.html" class="page">Configuration</a></li>
+  <li><a href="../directive/index.html" class="page">Directives</a>
+  <ul>
+    <li><a href="../directive/slide.html" class="page">Slide Directive</a></li>
+    <li><a href="../directive/notes.html" class="page">Notes Directive</a></li>
+    <li><a href="../directive/fragments.html" class="page">Fragments Directive</a></li>
+    <li><a href="../directive/quote.html" class="page">Quote Directive</a></li>
+  </ul></li>
+  <li><a href="../plugins/index.html" class="active page">Plugins</a>
+  <ul>
+    <li><a href="../plugins/math.html" class="page">Math Plugin</a></li>
+  </ul></li>
+  <li><a href="../includes.html" class="page">Includes</a></li>
+  <li><a href="../demo.html" class="page">Demo</a></li>
 </ul>
 <nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../plugins/index.html#plugins" class="header">Plugins</a>
+  <ul>
+    <li><a href="../plugins/index.html#reveal-plugin-support" class="header">Reveal Plugin Support</a></li>
+  </ul></li>
+</ul>
 </nav>
 
 </nav>
 <ul style="display: none">
 <li class="md-nav__item md-version" id="project.version">
 <label class="md-nav__link" for="__version">
-<i class="md-icon" title="Version">label_outline</i> 1.0.4.1
+<i class="md-icon" title="Version">label_outline</i> 1.0.6*
 </label>
 </li>
 </ul>
 </div>
 </div>
 </div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../plugins/index.html#plugins" class="header">Plugins</a>
+  <ul>
+    <li><a href="../plugins/index.html#reveal-plugin-support" class="header">Reveal Plugin Support</a></li>
+  </ul></li>
+</ul>
+</nav>
+
+</div>
+</div>
+</div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
-<p>Install plugin in project/plugins.sbt:</p>
-<p><strong>addSbtPlugin(&ldquo;com.sfxcode.paradox&rdquo; % &ldquo;sbt-paradox-reveal&rdquo; % &ldquo;1.0.4.1&rdquo;)</strong></p>
-<p>Enable Plugin in your build.sbt file:</p>
-<p><strong>enablePlugins(ParadoxRevealPlugin)</strong></p>
+<h1><a href="#plugins" name="plugins" class="anchor"><span class="anchor-link"></span></a>Plugins</h1>
+<h2><a href="#reveal-plugin-support" name="reveal-plugin-support" class="anchor"><span class="anchor-link"></span></a>Reveal Plugin Support</h2>
+<h3><a href="#standard-plugins" name="standard-plugins" class="anchor"><span class="anchor-link"></span></a>Standard Plugins</h3>
+<ul>
+  <li>zoom</li>
+  <li>search</li>
+  <li>notes</li>
+  <li>highlight</li>
+</ul>
+<h3><a href="#optional-plugins" name="optional-plugins" class="anchor"><span class="anchor-link"></span></a>Optional Plugins</h3>
+<ul>
+  <li>math</li>
+</ul>
 </div>
 <div>
-<a href="https://github.com/sfxcode/sbt-paradox-reveal/tree/v1.0.4.1/docs/src/main/paradox/includes/usage.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/sfxcode/sbt-paradox-reveal/tree/master/docs/src/main/paradox/plugins/index.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>
 <div class="print-only">
 <span class="md-source-file md-version">
-1.0.4.1
+1.0.6*
 </span>
 </div>
 </article>
@@ -170,6 +224,36 @@ Edit this page
 </div>
 </main>
 <footer class="md-footer">
+<div class="md-footer-nav">
+<nav class="md-footer-nav__inner md-grid">
+<a href="../directive/quote.html" title="Quote Directive" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+Previous
+</span>
+Quote Directive
+</span>
+</div>
+</a>
+<a href="../plugins/math.html" title="Math Plugin" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+Next
+</span>
+Math Plugin
+</span>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+</div>
+</a>
+</nav>
+</div>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-footer-copyright">
