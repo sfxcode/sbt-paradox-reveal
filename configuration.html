@@ -202,11 +202,22 @@ sfxcode/sbt-paradox-reveal
 <h1><a href="#configuration" name="configuration" class="anchor"><span class="anchor-link"></span></a>Configuration</h1>
 <h2><a href="#sbt-configuration" name="sbt-configuration" class="anchor"><span class="anchor-link"></span></a>SBT Configuration</h2>
 <p>You can alter theme and default slide transition in your build.sbt file.</p>
-<pre><code>Compile / paradoxRevealTheme ~= {
-       _.withTheme(ParadoxRevealTheme.ThemeBlack)
-        .withDefaultTransition(ParadoxRevealTheme.TransitionFade)
-}
-
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/sfxcode/sbt-paradox-reveal/tree/v1.0.5/build.sbt#L93-L110" target="_blank" title="Go to snippet source"></a><code class="language-sbt"><br/>lazy val demo = (project in file(&quot;demo&quot;))
+  .enablePlugins(ParadoxSitePlugin)
+  .enablePlugins(ParadoxRevealPlugin)
+  .settings(
+    name := &quot;paradox reveal presentation demo&quot;,
+    publish / skip := true,
+    Compile / paradoxRevealTheme ~= {
+      _.withTheme(ParadoxRevealTheme.ThemeSerif)  // choose theme
+        .withDefaultTransition(ParadoxRevealTheme.TransitionFade) // choose transition
+        .withMathPlugin // add plugin if needed
+    },
+    // exclude includes folder
+    (Compile / paradoxMarkdownToHtml / excludeFilter) :=
+      (Compile / paradoxMarkdownToHtml / excludeFilter).value ||
+      ParadoxPlugin.InDirectoryFilter((Compile / paradox / sourceDirectory).value / &quot;includes&quot;)
+  )
 </code></pre>
 <h3><a href="#themes" name="themes" class="anchor"><span class="anchor-link"></span></a>Themes</h3>
 <ul>
