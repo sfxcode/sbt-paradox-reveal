@@ -89,19 +89,23 @@ lazy val docs = (project in file("docs"))
     }
   )
 
-
+// #demo
 
 lazy val demo = (project in file("demo"))
   .enablePlugins(ParadoxSitePlugin)
   .enablePlugins(ParadoxRevealPlugin)
   .settings(
-    name := "paradox reveal demo",
+    name := "paradox reveal presentation demo",
     publish / skip := true,
     Compile / paradoxRevealTheme ~= {
-      _.withTheme(ParadoxRevealTheme.ThemeSerif)
-        .withDefaultTransition(ParadoxRevealTheme.TransitionFade)
-        .withMathPlugin
-    }
-
-
+      _.withTheme(ParadoxRevealTheme.ThemeSerif)  // choose theme
+        .withDefaultTransition(ParadoxRevealTheme.TransitionFade) // choose transition
+        .withMathPlugin // add plugin if needed
+    },
+    // exclude includes folder
+    (Compile / paradoxMarkdownToHtml / excludeFilter) :=
+      (Compile / paradoxMarkdownToHtml / excludeFilter).value ||
+      ParadoxPlugin.InDirectoryFilter((Compile / paradox / sourceDirectory).value / "includes")
   )
+
+//  #demo

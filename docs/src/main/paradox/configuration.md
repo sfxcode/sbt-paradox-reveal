@@ -4,13 +4,7 @@
 
 You can alter theme and default slide transition in your build.sbt file.
 
-```
-Compile / paradoxRevealTheme ~= {
-       _.withTheme(ParadoxRevealTheme.ThemeBlack)
-        .withDefaultTransition(ParadoxRevealTheme.TransitionFade)
-}
-
-```
+@@snip [/build.sbt](/build.sbt) { #demo }
 
 ### Themes
 
