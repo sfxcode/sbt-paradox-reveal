@@ -17,7 +17,7 @@
 import sbt._
 
 object Version {
-  val paradox = "0.6.5"
+  val paradox = "0.6.8"
   val sbtWeb = "1.4.4"
 
 

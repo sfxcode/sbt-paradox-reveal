@@ -8,7 +8,7 @@ Set
 ``` { color=#dddddd } ```
 on a slide to change the background
 
-[![logo](https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png)](vertical_slides.md#)
+[![arrow.png](../images/arrow.png)](#)
 
 @@@@
 

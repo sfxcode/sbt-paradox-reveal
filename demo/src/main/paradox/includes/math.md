@@ -2,11 +2,11 @@
 ## Math Functions
 
 ```scala
-    Compile / paradoxRevealTheme ~= {
-      _.withTheme(ParadoxRevealTheme.ThemeSky)
-        .withDefaultTransition(ParadoxRevealTheme.TransitionFade)
-        .withMathPlugin
-    }
+Compile / paradoxRevealTheme ~= {
+  _.withTheme(ParadoxRevealTheme.ThemeSky)
+    .withDefaultTransition(ParadoxRevealTheme.TransitionFade)
+    .withMathPlugin
+}
 ```
 
 ```raw

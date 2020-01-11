@@ -10,7 +10,7 @@ Slides can be nested inside of each other.
 
 Use the **Space** key to navigate through all slides.
 
-[![logo](https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png)](#)
+[![arrow.png](../images/arrow.png)](#)
 
 @@@@
 
