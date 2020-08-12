@@ -134,6 +134,9 @@ class MarkdownTestkit {
     lazy val getSource_url = ""
 
     lazy val getProperties = properties.asJava
+
+    lazy val getPath = ""
+
   }
 
   case class EmptyLink() extends PageTemplate.Link {

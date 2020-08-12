@@ -7,9 +7,9 @@ import scala.collection.JavaConverters._
 
 inThisBuild(List(
   organization := "com.sfxcode.paradox",
-  version := "1.0.6",
+  version := "1.0.7",
   licenses += "Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.html"),
-  scalaVersion := "2.12.10",
+  scalaVersion := "2.12.12",
   bintrayPackageLabels := Seq("sbt", "plugin", "paradox", "reveal.js"),
 
   organizationName := "sfxcode",

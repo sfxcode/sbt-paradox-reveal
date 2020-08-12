@@ -17,11 +17,11 @@
 import sbt._
 
 object Version {
-  val paradox = "0.6.8"
+  val paradox = "0.8.0"
   val sbtWeb = "1.4.4"
 
 
-  val specs2 = "4.7.1"
+  val specs2 = "4.10.2"
 }
 
 object Library {
