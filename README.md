@@ -31,12 +31,18 @@ it is easy to create a presentation with code examples in short time.
 
 ## Usage
 
+### Giter8 Template
+
+g8 https://github.com/sfxcode/paradox-reveal-template.g8
+
+### Custom
+
 This plugin requires sbt 1.0.0+
 
 Install plugin in project/plugins.sbt:
 
 ```
-addSbtPlugin("com.sfxcode.paradox" % "sbt-paradox-reveal" % 1.0.4)
+addSbtPlugin("com.sfxcode.paradox" % "sbt-paradox-reveal" % 1.0.7)
 ```
 
 Enable Plugin in your build.sbt file:
