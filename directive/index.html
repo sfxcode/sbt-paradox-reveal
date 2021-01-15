@@ -198,12 +198,33 @@ sfxcode/sbt-paradox-reveal
 <div class="md-content__searchable">
 <h1><a href="#directives" name="directives" class="anchor"><span class="anchor-link"></span></a>Directives</h1>
 <h2><a href="#reveal-specific-directives" name="reveal-specific-directives" class="anchor"><span class="anchor-link"></span></a>Reveal specific directives</h2>
-<ul>
-  <li>Slide</li>
-  <li>Notes</li>
-  <li>Fragments</li>
-  <li>Quote</li>
-</ul>
+<h3><a href="#slide" name="slide" class="anchor"><span class="anchor-link"></span></a>Slide</h3>
+<pre><code>@@@ slide
+# My Presentation
+This Preasentation was made by Paradox and reveal.js
+@@@
+</code></pre>
+<h3><a href="#notes" name="notes" class="anchor"><span class="anchor-link"></span></a>Notes</h3>
+<pre><code>@@@@ notes
+This slide has notes.
+@@@@
+</code></pre>
+<h3><a href="#fragments" name="fragments" class="anchor"><span class="anchor-link"></span></a>Fragments</h3>
+<h3><a href="#quote" name="quote" class="anchor"><span class="anchor-link"></span></a>Quote</h3>
+<pre><code>@@@ slide
+## Block Quotes
+@@@@ quote
+&amp;ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&amp;rdquo;
+@@@@
+@@@
+</code></pre>
+<h3><a href="#code" name="code" class="anchor"><span class="anchor-link"></span></a>Code</h3>
+<pre><code>@@@ code { title=&#39;Some Code&#39; }
+# Code 
+val a = 3
+@@@
+</code></pre>
 </div>
 <div>
 <a href="https://github.com/sfxcode/sbt-paradox-reveal/tree/v1.1.0/docs/src/main/paradox/directive/index.md" title="Edit this page" class="md-source-file md-edit">

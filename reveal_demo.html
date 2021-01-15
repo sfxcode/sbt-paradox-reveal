@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <meta name="generator" content="Paradox, Paradox-Reveal-Theme : 0.9.1">
+    <meta name="generator" content="Paradox, Paradox-Reveal-Theme : 1.1.0">
 
     <meta name="description" content="Paradox Reveal is a paradox plugin for reveal.js presentations.">
 
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/theme/black.css">
 
     <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/monokai.css">
+    <link rel="stylesheet" href="lib/monokai.css">
 
     <!-- Printing and PDF exports -->
     <script>
@@ -29,7 +29,12 @@
         link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
+
+    <!--[if lt IE 9]>
+    <script src="../lib/js/html5shiv.js"></script>
+    <![endif]-->
 </head>
+
 
 <body>
 <div class="reveal">
@@ -48,7 +53,7 @@
                 <h2><a href="#vertical-slides" name="vertical-slides" class="anchor"><span class="anchor-link"></span></a>Vertical Slides</h2>
                 <p>Slides can be nested inside of each other.</p>
                 <p>Use the <strong>Space</strong> key to navigate through all slides.</p>
-                <p><a href="#"><img src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="logo" /></a></p>
+                <p><a href="#"><img src="../images/arrow.png" alt="arrow.png" /></a></p>
             </section>
             <section>
                 <h2><a href="#basement-level-1" name="basement-level-1" class="anchor"><span class="anchor-link"></span></a>Basement Level 1</h2>
@@ -78,9 +83,27 @@
         <section>
             <h2><a href="#images" name="images" class="anchor"><span class="anchor-link"></span></a>Images</h2>
             <p><img src="images/bio-photo.jpg" alt="bio" /></p>
-        </section><section>
-        <h2><a href="#code" name="code" class="anchor"><span class="anchor-link"></span></a>Code</h2>
-        <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/sfxcode/sbt-paradox-reveal/tree/v0.9.1/demo/src/main/scala/example/Hello.scala" target="_blank" title="Go to snippet source"></a><code class="language-scala">package example
+        </section><section data-auto-animate>
+        <h2 data-id="code-title">Code example</h2>
+
+        <pre><code class="hljs" data-trim data-line-numbers>
+package example
+
+object Hello extends Greeting with App {
+  println(greeting)
+}
+
+trait Greeting {
+  lazy val greeting: String = "hello"
+}
+
+</code></pre>
+
+        <p>Some Footer text ...</p>
+    </section>
+        <section>
+            <h2><a href="#code-snippet-file" name="code-snippet-file" class="anchor"><span class="anchor-link"></span></a>Code Snippet File</h2>
+            <pre class="prettyprint"><code class="language-scala">package example
 
 object Hello extends Greeting with App {
   println(greeting)
@@ -91,12 +114,32 @@ trait Greeting {
 }
 
 </code></pre>
+            <p>Hallo</p>
+        </section><section>
+        <h2><a href="#math-functions" name="math-functions" class="anchor"><span class="anchor-link"></span></a>Math Functions</h2>
+        <pre class="prettyprint"><code class="language-scala">Compile / paradoxRevealTheme ~= {
+  _.withTheme(ParadoxRevealTheme.ThemeSky)
+    .withDefaultTransition(ParadoxRevealTheme.TransitionFade)
+    .withMathPlugin
+}
+</code></pre>
+
+        \[\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}
+        \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+        \frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \\
+        \frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0
+        \end{vmatrix}  \]
+
     </section><!-- Example of Fragments -->
         <section>
             <h2><a href="#fragments" name="fragments" class="anchor"><span class="anchor-link"></span></a>Fragments</h2>
             <p>Hit the next arrow&hellip;</p>
             <p class="fragment">... to step through ...</p>
-            <p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide</span> </p>
+            <p>
+                <span class="fragment">... a</span>
+                <span class="fragment">fragmented</span>
+                <span class="fragment">slide</span>
+            </p>
             <aside class="notes">
                 <p>This slide has fragments which are also stepped through in the notes window.</p>
             </aside>
@@ -130,23 +173,21 @@ trait Greeting {
         <section>
             <section data-background="#dddddd">
                 <h2><a href="#slide-backgrounds" name="slide-backgrounds" class="anchor"><span class="anchor-link"></span></a>Slide Backgrounds</h2>
-                <p>Set <code>{ background=#dddddd }</code> on a slide to change the background</p>
-                <p><a href="vertical_slides.md#"><img src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="logo" /></a></p>
+                <p>Set <code>{ color=#dddddd }</code> on a slide to change the background</p>
+                <p><a href="#"><img src="../images/arrow.png" alt="arrow.png" /></a></p>
             </section>
             <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
                 <h2><a href="#image-backgrounds" name="image-backgrounds" class="anchor"><span class="anchor-link"></span></a>Image Backgrounds</h2>
-                <p><code>{ background=&#39;image.png&#39; }</code></p>
+                <p><code>{ image=&#39;image.png&#39; }</code></p>
             </section>
-            <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-Size="100px">
-                <h2><a href="#image-backgrounds" name="image-backgrounds" class="anchor"><span class="anchor-link"></span></a>Image Backgrounds</h2>
-                <p><code>{ background=&#39;image.png&#39; }</code></p>
+            <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-size="cover" data-background-repeat="true">
+                <h2><a href="#image-backgrounds-repeat" name="image-backgrounds-repeat" class="anchor"><span class="anchor-link"></span></a>Image Backgrounds Repeat</h2>
+                <p><code>{ image=&#39;image.png&#39; }</code></p>
             </section>
         </section><section>
         <h2><a href="#clever-quotes" name="clever-quotes" class="anchor"><span class="anchor-link"></span></a>Clever Quotes</h2>
-        <p>These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The nice thing about standards is that there are so many to choose from</q> and block:
-
-        </p>
-        <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+        <p>These guys come in two forms, inline: <q>The nice thing about standards is that there are so many to choose from</q> and block:</p>
+        <blockquote>
             <p>&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;</p>
         </blockquote>
     </section>
@@ -155,20 +196,48 @@ trait Greeting {
 
 <script src="js/reveal.js"></script>
 
+
+
+<script src="js/reveal.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+
+<!-- Reveal-->
+
+<script src="../plugin/math/math.js"></script>
+
 <script>
-    // More info about config & dependencies:
-    // - https://github.com/hakimel/reveal.js#configuration
-    // - https://github.com/hakimel/reveal.js#dependencies
+
+    // Also available as an ES module, see:
+    // https://revealjs.com/initialization/
     Reveal.initialize({
-        transition: 'slide',
-        dependencies: [
-            { src: 'plugin/markdown/marked.js' },
-            { src: 'plugin/markdown/markdown.js' },
-            { src: 'plugin/notes/notes.js', async: true },
-            { src: 'plugin/highlight/highlight.js', async: true }
-        ]
+        transition: 'fade',
+        controls: ('true' === 'false'),
+        progress: ('true' === 'true'),
+        center: ('true' === 'true'),
+        hash: ('true' === 'true'),
+
+        math: {
+// mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+            config: 'TeX-AMS_HTML-full',
+            TeX: {
+                Macros: {
+                    R: '\mathbb{R}',
+                    set: [ '\left\{#1 \; ; \; #2\right\}', 2 ]
+                }
+            }
+        },
+
+// Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealHighlight ,RevealMath]
     });
+
 </script>
+
+
+
 
 </body>
 
