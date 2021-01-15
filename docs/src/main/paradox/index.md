@@ -2,7 +2,7 @@
 
 ## Motivation
 
-As software developer i like to create presentations with code examples
+As a software developer i like to create presentations with code examples
 fast and easy. For technical presentations i prefer reveal.js (simple,
 portable, nice transitions ...).
 

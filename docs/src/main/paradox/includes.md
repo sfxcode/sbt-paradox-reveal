@@ -1,6 +1,6 @@
 # Includes
 
-If you patition your slides in seperate markdown files, you need to create a index directive.
+If you like to partition your slides in seperate markdown files, you need to create an index directive.
 
 Otherwise, you will see some kind of error like
 

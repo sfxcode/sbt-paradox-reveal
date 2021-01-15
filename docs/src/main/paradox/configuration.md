@@ -6,7 +6,37 @@ You can alter theme and default slide transition in your build.sbt file.
 
 @@snip [/build.sbt](/build.sbt) { #demo }
 
+### Options
+
+#### True by default
+
+Example without controls:
+
+```
+.withControls(false)
+```
+
+* withControls
+* withProgress
+* withCenter
+* withHash
+
+#### Empty by default
+
+* withCustomStylesheet
+* withCustomJavaScript
+
+
 ### Themes
+
+withTheme()
+
+Example :
+```
+.withTheme(ThemeMoon)
+```
+
+Default ThemeBlack.
 
 * ThemeBeige
 * ThemeBlack
@@ -21,6 +51,15 @@ You can alter theme and default slide transition in your build.sbt file.
 * ThemeWhite
 
 ### Default Transitions
+
+withDefaultTransition()
+
+Example :
+```
+.withDefaultTransition(TransitionConvex)
+```
+
+Default TransitionSlide.
 
 * TransitionNone
 * TransitionFade
