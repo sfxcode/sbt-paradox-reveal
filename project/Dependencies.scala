@@ -17,19 +17,19 @@
 import sbt._
 
 object Version {
-  val paradox = "0.8.0"
+  val paradox = "0.9.1"
   val sbtWeb = "1.4.4"
 
 
-  val specs2 = "4.10.2"
+  val specs2 = "4.10.5"
 }
 
 object Library {
 
   val paradox = "com.lightbend.paradox" %% "paradox" % Version.paradox
-  
+
   val sbtParadox = "com.lightbend.paradox" % "sbt-paradox" % Version.paradox
-  
+
   val sbtWeb = "com.typesafe.sbt" % "sbt-web" % Version.sbtWeb
 
   val specs2 = "org.specs2" %% "specs2-core" % Version.specs2

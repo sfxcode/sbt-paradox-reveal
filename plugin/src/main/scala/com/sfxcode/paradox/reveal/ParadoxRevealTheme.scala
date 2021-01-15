@@ -11,6 +11,17 @@ case class ParadoxRevealTheme(properties: Map[String, String]) {
   def withDefaultTransition(defaultTransition: String) =
     withProperties("default.transition" -> defaultTransition)
 
+  def withControls(useControls: Boolean) =
+    withProperties("default.controls" -> useControls.toString)
+
+  def withProgress(useProgress: Boolean) =
+    withProperties("default.progress" -> useProgress.toString)
+
+  def withCenter(useCenter: Boolean) =
+    withProperties("default.center" -> useCenter.toString)
+
+  def withHash(useHash: Boolean) =
+    withProperties("default.hash" -> useHash.toString)
 
   def withCustomStylesheet(path: String) =
     withProperties("custom.stylesheet" -> path)
@@ -59,6 +70,10 @@ object ParadoxRevealTheme {
     ParadoxRevealTheme(Map.empty)
       .withTheme(ThemeBlack)
       .withDefaultTransition(TransitionSlide)
+      .withControls(true)
+      .withProgress(true)
+      .withCenter(true)
+      .withHash(true)
 
   }
 
