@@ -26,8 +26,8 @@ For
 use the id option.
 
 ```
-@@@ slide { id=my-slide }
-Slide with custom id
+@@@ code { id=my-slide }
+# Code 
 @@@
 ```
 

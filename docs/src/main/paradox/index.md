@@ -28,6 +28,11 @@ and **Reveal.js** for
 * [Speaker Notes](https://revealjs.com/#/20)
 
 it is easy to create a presentation with code examples in short time.
+
+## Giter8 Template
+
+Giter8 Template available under [https://github.com/sfxcode/paradox-reveal-template.g8](https://github.com/sfxcode/paradox-reveal-template.g8)
+
 ## Usage
 
 Install plugin in project/plugins.sbt:

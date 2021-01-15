@@ -38,4 +38,4 @@ Press ```s``` for the reveal.js speaker viev.
 
 ### Showcase sources
 
-Source code of this demo is in the demo folder of this project.
+Source code of this demo is in the [demo](https://github.com/sfxcode/sbt-paradox-reveal/tree/master/demo/src/main) folder of this project.
