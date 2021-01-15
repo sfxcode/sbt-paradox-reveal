@@ -147,6 +147,7 @@ sfxcode/sbt-paradox-reveal
     <li><a href="directive/notes.html" class="page">Notes Directive</a></li>
     <li><a href="directive/fragments.html" class="page">Fragments Directive</a></li>
     <li><a href="directive/quote.html" class="page">Quote Directive</a></li>
+    <li><a href="directive/code.html" class="page">Code Directive</a></li>
   </ul></li>
   <li><a href="plugins/index.html" class="page">Plugins</a>
   <ul>
@@ -171,7 +172,7 @@ sfxcode/sbt-paradox-reveal
 <ul style="display: none">
 <li class="md-nav__item md-version" id="project.version">
 <label class="md-nav__link" for="__version">
-<i class="md-icon" title="Version">label_outline</i> 1.0.5
+<i class="md-icon" title="Version">label_outline</i> 1.1.0
 </label>
 </li>
 </ul>
@@ -202,24 +203,50 @@ sfxcode/sbt-paradox-reveal
 <h1><a href="#configuration" name="configuration" class="anchor"><span class="anchor-link"></span></a>Configuration</h1>
 <h2><a href="#sbt-configuration" name="sbt-configuration" class="anchor"><span class="anchor-link"></span></a>SBT Configuration</h2>
 <p>You can alter theme and default slide transition in your build.sbt file.</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/sfxcode/sbt-paradox-reveal/tree/v1.0.5/build.sbt#L93-L110" target="_blank" title="Go to snippet source"></a><code class="language-sbt"><br/>lazy val demo = (project in file(&quot;demo&quot;))
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/sfxcode/sbt-paradox-reveal/tree/v1.1.0/build.sbt#L91-L113" target="_blank" title="Go to snippet source"></a><code class="language-sbt"><br/>lazy val demo = (project in file(&quot;demo&quot;))
   .enablePlugins(ParadoxSitePlugin)
   .enablePlugins(ParadoxRevealPlugin)
   .settings(
     name := &quot;paradox reveal presentation demo&quot;,
     publish / skip := true,
     Compile / paradoxRevealTheme ~= {
-      _.withTheme(ParadoxRevealTheme.ThemeSerif)  // choose theme
-        .withDefaultTransition(ParadoxRevealTheme.TransitionFade) // choose transition
+      _.withTheme(ParadoxRevealTheme.ThemeBlack) // choose theme
+        .withDefaultTransition(
+          ParadoxRevealTheme.TransitionFade
+        ) // choose transition
         .withMathPlugin // add plugin if needed
+        .withControls(false)
     },
     // exclude includes folder
     (Compile / paradoxMarkdownToHtml / excludeFilter) :=
       (Compile / paradoxMarkdownToHtml / excludeFilter).value ||
-      ParadoxPlugin.InDirectoryFilter((Compile / paradox / sourceDirectory).value / &quot;includes&quot;)
+        ParadoxPlugin.InDirectoryFilter(
+          (Compile / paradox / sourceDirectory).value / &quot;includes&quot;
+        )
   )
 </code></pre>
+<h3><a href="#options" name="options" class="anchor"><span class="anchor-link"></span></a>Options</h3>
+<h4><a href="#true-by-default" name="true-by-default" class="anchor"><span class="anchor-link"></span></a>True by default</h4>
+<p>Example without controls:</p>
+<pre><code>.withControls(false)
+</code></pre>
+<ul>
+  <li>withControls</li>
+  <li>withProgress</li>
+  <li>withCenter</li>
+  <li>withHash</li>
+</ul>
+<h4><a href="#empty-by-default" name="empty-by-default" class="anchor"><span class="anchor-link"></span></a>Empty by default</h4>
+<ul>
+  <li>withCustomStylesheet</li>
+  <li>withCustomJavaScript</li>
+</ul>
 <h3><a href="#themes" name="themes" class="anchor"><span class="anchor-link"></span></a>Themes</h3>
+<p>withTheme()</p>
+<p>Example :</p>
+<pre><code>.withTheme(ThemeMoon)
+</code></pre>
+<p>Default ThemeBlack.</p>
 <ul>
   <li>ThemeBeige</li>
   <li>ThemeBlack</li>
@@ -234,6 +261,11 @@ sfxcode/sbt-paradox-reveal
   <li>ThemeWhite</li>
 </ul>
 <h3><a href="#default-transitions" name="default-transitions" class="anchor"><span class="anchor-link"></span></a>Default Transitions</h3>
+<p>withDefaultTransition()</p>
+<p>Example :</p>
+<pre><code>.withDefaultTransition(TransitionConvex)
+</code></pre>
+<p>Default TransitionSlide.</p>
 <ul>
   <li>TransitionNone</li>
   <li>TransitionFade</li>
@@ -255,13 +287,13 @@ sfxcode/sbt-paradox-reveal
 </ul>
 </div>
 <div>
-<a href="https://github.com/sfxcode/sbt-paradox-reveal/tree/v1.0.5/docs/src/main/paradox/configuration.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/sfxcode/sbt-paradox-reveal/tree/v1.1.0/docs/src/main/paradox/configuration.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>
 <div class="print-only">
 <span class="md-source-file md-version">
-1.0.5
+1.1.0
 </span>
 </div>
 </article>
