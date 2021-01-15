@@ -9,7 +9,7 @@ Paradox.
 
 ## Directives
 
-Used directives are slide, notes, quote and fragments.
+Used directives are slide, notes, quote, code  and fragments.
 
 ## Use Paradox for Reveal.js presentations
 
@@ -34,6 +34,16 @@ it is easy to create a presentation with code examples in short time.
 ### Giter8 Template
 
 g8 https://github.com/sfxcode/paradox-reveal-template.g8
+
+Choose projectName ...
+
+```
+cd projectName
+
+sbt
+
+previewAuto
+```
 
 ### Custom
 
