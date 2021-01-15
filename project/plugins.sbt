@@ -19,4 +19,4 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-site" % "1.4.1")
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-ghpages" % "0.6.3")
 
-addSbtPlugin("com.sfxcode.paradox" % "sbt-paradox-reveal" % "1.0.8.2")
+addSbtPlugin("com.sfxcode.paradox" % "sbt-paradox-reveal" % "1.1.0")
