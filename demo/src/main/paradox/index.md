@@ -5,14 +5,21 @@
 Created by [SFXCode](https://github.com/sfxcode)
 @@@
 
+
 ```raw
 				<section class="bg-red-300">
-					<h2 class="text-xl bg-blue-400">Tailwind Plugin</h2>
-					<p>
+					<h2 class="text-4xl bg-blue-400 ">Tailwind Plugin</h2>
+					<p class="text-base">
 						Use classes like bg-red-300 for easy styling ...
 					</p>
+					<div class="flex gap-6 text-green-700 p-2">
+					<div>Green Text</div>
+					<div>in</div>
+					<div>Flexbox</div>
+</div>
 				</section>
 ```
+
 
 @@@ slide
 ## Hello There
