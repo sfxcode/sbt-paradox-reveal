@@ -1,5 +1,9 @@
 # Changes
 
+## Version 1.1.1
+* Update to Paradox 0.9.1
+* add tailwind plugin
+
 ## Version 1.1.0
 
 * Update to Paradox 0.9.1

@@ -5,6 +5,15 @@
 Created by [SFXCode](https://github.com/sfxcode)
 @@@
 
+```raw
+				<section class="bg-red-300">
+					<h2 class="text-xl bg-blue-400">Tailwind Plugin</h2>
+					<p>
+						Use classes like bg-red-300 for easy styling ...
+					</p>
+				</section>
+```
+
 @@@ slide
 ## Hello There
 reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.

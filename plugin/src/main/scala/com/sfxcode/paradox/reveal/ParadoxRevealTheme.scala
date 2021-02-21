@@ -32,6 +32,8 @@ case class ParadoxRevealTheme(properties: Map[String, String]) {
   def withMathPlugin() =
     withProperties("plugin.math" -> "true")
 
+  def withTailwindPlugin() =
+    withProperties("plugin.tailwind" -> "true")
 
   def paradoxProperties(): Map[String, String] =
     properties.map(p => s"reveal.${p._1}" -> p._2)
@@ -66,7 +68,7 @@ object ParadoxRevealTheme {
   val TransitionConcave = "concave"
   val TransitionZoom = "zoom"
 
-  def apply():ParadoxRevealTheme = {
+  def apply(): ParadoxRevealTheme = {
     ParadoxRevealTheme(Map.empty)
       .withTheme(ThemeBlack)
       .withDefaultTransition(TransitionSlide)
@@ -78,5 +80,3 @@ object ParadoxRevealTheme {
   }
 
 }
-
-

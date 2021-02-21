@@ -29,6 +29,10 @@
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/monokai.css">
 
+    $ if (page.properties.("reveal.plugin.tailwind")) $
+    <link rel="stylesheet" href="plugin/tailwind/tailwind.min.css">
+    $ endif $
+
     $ if (page.properties.("reveal.custom.stylesheet")) $
     <link rel="stylesheet" href="$page.base$$page.properties.("reveal.custom.stylesheet")$">
     $ endif $

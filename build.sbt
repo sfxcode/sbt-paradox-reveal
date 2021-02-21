@@ -8,7 +8,7 @@ import scala.collection.JavaConverters._
 inThisBuild(
   List(
     organization := "com.sfxcode.paradox",
-    version := "1.1.0",
+    version := "1.1.1",
     licenses += "Apache-2.0" -> url(
       "http://www.apache.org/licenses/LICENSE-2.0.html"
     ),
@@ -101,6 +101,7 @@ lazy val demo = (project in file("demo"))
           ParadoxRevealTheme.TransitionFade
         ) // choose transition
         .withMathPlugin // add plugin if needed
+        .withTailwindPlugin()
         .withControls(false)
     },
     // exclude includes folder
