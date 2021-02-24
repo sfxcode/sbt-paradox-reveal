@@ -5,8 +5,8 @@ import com.sfxcode.paradox.reveal.markdown.directive.SlideDirective._
 import org.pegdown.Printer
 import org.pegdown.ast._
 
-
-case class SlideDirective(name: String) extends ContainerBlockDirective(Array(name): _*) {
+case class SlideDirective(name: String)
+    extends ContainerBlockDirective(Array(name): _*) {
   def render(node: DirectiveNode, visitor: Visitor, printer: Printer): Unit = {
 
     val id = node.attributes.value("id", "")
@@ -21,11 +21,14 @@ case class SlideDirective(name: String) extends ContainerBlockDirective(Array(na
     val image = node.attributes.value("image", "")
 
     val video = node.attributes.value("video", "")
-    val videoLoop = video.nonEmpty && node.attributes.booleanValue("loop", false)
-    val videoMuted = video.nonEmpty && node.attributes.booleanValue("muted", false)
+    val videoLoop =
+      video.nonEmpty && node.attributes.booleanValue("loop", false)
+    val videoMuted =
+      video.nonEmpty && node.attributes.booleanValue("muted", false)
 
     val iframe = node.attributes.value("iframe", "")
-    val iframeInteractive = iframe.nonEmpty && node.attributes.booleanValue("interactive", false)
+    val iframeInteractive =
+      iframe.nonEmpty && node.attributes.booleanValue("interactive", false)
 
     val backgroundSize = node.attributes.value("size", "")
     val backgroundPosition = node.attributes.value("position", "")
@@ -41,18 +44,22 @@ case class SlideDirective(name: String) extends ContainerBlockDirective(Array(na
       printer.print(s""" id="${id}"""")
 
     if (style.nonEmpty)
-      printer.print(s""" id="${style}"""")
+      printer.print(s""" style="${style}"""")
 
     if (styleclass.nonEmpty)
-      printer.print(s""" id="${styleclass}"""")
-
+      printer.print(s""" class="${styleclass}"""")
 
     if (transition.nonEmpty && TransitionList.contains(transition.toLowerCase))
       printer.print(s""" data-transition="${transition.toLowerCase}"""")
 
-    if (transitionSpeed.nonEmpty && TransitionSpeedList.contains(transitionSpeed.toLowerCase))
-      printer.print(s""" data-transition-speed="${transitionSpeed.toLowerCase}"""")
-
+    if (
+      transitionSpeed.nonEmpty && TransitionSpeedList.contains(
+        transitionSpeed.toLowerCase
+      )
+    )
+      printer.print(
+        s""" data-transition-speed="${transitionSpeed.toLowerCase}""""
+      )
 
     if (color.nonEmpty)
       printer.print(s""" data-background="${color}"""")
@@ -63,13 +70,11 @@ case class SlideDirective(name: String) extends ContainerBlockDirective(Array(na
     if (videoLoop)
       printer.print(s"""  data-background-video-loop""")
 
-
     if (iframe.nonEmpty)
       printer.print(s""" data-background-iframe="${iframe}"""")
 
     if (iframeInteractive)
       printer.print(s"""  data-background-interactive""")
-
 
     if (image.nonEmpty)
       printer.print(s""" data-background="${image}"""")
@@ -86,9 +91,14 @@ case class SlideDirective(name: String) extends ContainerBlockDirective(Array(na
     if (backgroundOpacity.nonEmpty)
       printer.print(s""" data-background-opacity="${backgroundOpacity}"""")
 
-    if (backgroundTransition.nonEmpty && TransitionList.contains(transition.toLowerCase))
-      printer.print(s""" data-background-transition="${backgroundTransition.toLowerCase}"""")
-
+    if (
+      backgroundTransition.nonEmpty && TransitionList.contains(
+        transition.toLowerCase
+      )
+    )
+      printer.print(
+        s""" data-background-transition="${backgroundTransition.toLowerCase}""""
+      )
 
     printer.print(s""">""")
     node.contentsNode.accept(visitor)
@@ -98,6 +108,7 @@ case class SlideDirective(name: String) extends ContainerBlockDirective(Array(na
 }
 
 object SlideDirective {
-  val TransitionList = List("none", "fade", "slide", "convex", "concave", "zoom")
+  val TransitionList =
+    List("none", "fade", "slide", "convex", "concave", "zoom")
   val TransitionSpeedList = List("normal", "slow", "fast")
 }

@@ -37,10 +37,10 @@ case class CodeDirective(name: String)
       printer.print(s""" id="${id}"""")
 
     if (style.nonEmpty)
-      printer.print(s""" id="${style}"""")
+      printer.print(s""" style="${style}"""")
 
     if (styleclass.nonEmpty)
-      printer.print(s""" id="${styleclass}"""")
+      printer.print(s""" class="${styleclass}"""")
 
     if (transition.nonEmpty && TransitionList.contains(transition.toLowerCase))
       printer.print(s""" data-transition="${transition.toLowerCase}"""")

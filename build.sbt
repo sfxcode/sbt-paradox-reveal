@@ -8,7 +8,7 @@ import scala.collection.JavaConverters._
 inThisBuild(
   List(
     organization := "com.sfxcode.paradox",
-    version := "1.1.1",
+    version := "1.1.2",
     licenses += "Apache-2.0" -> url(
       "http://www.apache.org/licenses/LICENSE-2.0.html"
     ),
